@@ -20,7 +20,7 @@ body {
 }
 
 .container {
-  max-width: calc($container-width + $container-padding * 2) + 'px';
+  max-width: calc($container-width + $container-padding * 2) + px;
   margin: 0 auto;
-  padding: $container-padding + 'px';
+  padding: $container-padding + px;
 }
