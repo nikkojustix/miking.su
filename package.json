@@ -45,6 +45,7 @@
     "gulp-zip": "latest",
     "imask": "latest",
     "sass": "latest",
+    "swiper": "^8.3.1",
     "vinyl-ftp": "latest",
     "webp-converter": "2.2.3",
     "webpack": "latest",

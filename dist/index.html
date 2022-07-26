@@ -14,23 +14,69 @@
   <div class="container">
     <div class="header__inner">
       <div class="header__topbar">
-        <a class="logo" href="#">
-          <img class="logo__img" src="img/brands/miking-logo.png" alt="miking logo" />
-          <span class="logo__text">miking</span>
-        </a>
+        <div class="header__logo swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <a class="logo" href="#">
+                <img class="logo__img" src="img/brands/miking-logo.png" alt="miking logo" />
+                <img class="logo__text" src="img/brands/miking-logo-text.svg" alt="miking" />
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a class="logo" href="#">
+                <img class="logo__img" src="img/brands/mkbar-logo.png" alt="mkbar logo" />
+                <img class="logo__text" src="img/brands/mkbar-logo-text.svg" alt="mkbar" />
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a class="logo" href="#">
+                <img class="logo__img" src="img/brands/sidia-logo.png" alt="sidia logo" />
+                <img class="logo__text" src="img/brands/sidia-logo-text.svg" alt="sidia" />
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a class="logo" href="#">
+                <img class="logo__img" src="img/brands/jumbo-logo.png" alt="jumbo juice logo" />
+                <img class="logo__text" src="img/brands/jumbo-logo-text.svg" alt="jumbo juice" />
+              </a>
+            </div>
+          </div>
+        </div>
         <nav class="menu">
           <ul class="menu__list">
-            <li class="menu__item"><a class="menu__link" href="">одноразовые</a></li>
-            <li class="menu__item"><a class="menu__link" href="">многоразовые</a></li>
-            <li class="menu__item"><a class="menu__link" href="">картриджи</a></li>
-            <li class="menu__item"><a class="menu__link" href="">жидкости</a></li>
+            <li class="menu__item">
+              <a class="menu__link menu__link--dropdown" href="">Продукция</a>
+              <ul class="menu__submenu">
+                <li class="menu__submenu-item">
+                  <a href="" class="menu__submenu-link">одноразовые</a>
+                </li>
+                <li class="menu__submenu-item">
+                  <a href="" class="menu__submenu-link">многоразовые</a>
+                </li>
+                <li class="menu__submenu-item">
+                  <a href="" class="menu__submenu-link">картриджи</a>
+                </li>
+                <li class="menu__submenu-item">
+                  <a href="" class="menu__submenu-link">жидкости</a>
+                </li>
+              </ul>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link" href="">Видео</a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link" href="">О нас</a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link" href="">Контакты</a>
+            </li>
           </ul>
         </nav>
         <div class="header__contacts">
-          <a href="tel:+79789125522" class="header__link">+7(978)912-55-22</a
-          ><a href="mailto:zakaz@miking.su" class="header__link">zakaz@miking.su</a>
+          <a class="header__link" href="tel:+79789125522">+7(978)912-55-22</a>
+          <a class="header__link" href="mailto:zakaz@miking.su">zakaz@miking.su</a>
         </div>
-        <a href="#" class="header__btn">Получить прайс-лист<br />с оптовыми ценами</a>
+        <a class="header__btn" href="#">Получить прайс-лист<br />с оптовыми ценами</a>
       </div>
       <div class="header__content"></div>
     </div>
