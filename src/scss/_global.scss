@@ -183,11 +183,60 @@
   }
 }
 
+.download-btn {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 10px 20px 10px 15px;
+  border: 1px solid $color-primary-light;
+  border-radius: 40px;
+  color: $color-primary-light;
+  font-size: 12px;
+  line-height: 1.2;
+  transition: 0.3s;
+
+  &:hover,
+  &:focus {
+    color: $color-primary-dark;
+    border-color: $color-primary-dark;
+
+    .download-btn__icon {
+      stroke: $color-primary-dark;
+    }
+  }
+
+  &--white {
+    border: 1px solid $color-white;
+    color: $color-white;
+
+    &:hover,
+    &:focus {
+      border: 1px solid #e9e9e9;
+      color: #e9e9e9;
+
+      .download-btn__icon {
+        stroke: #e9e9e9;
+      }
+    }
+  }
+
+  &__icon {
+    stroke: $color-primary-light;
+    transition: stroke 0.3s;
+    margin-right: 10px;
+
+    &--white {
+      stroke: $color-white;
+    }
+  }
+}
+
 .swiper-button-prev {
   left: -50px;
   background-image: url('@img/arrow-prev.svg');
   width: 40px;
   height: 40px;
+  transform: translateY(-50%);
 }
 
 .swiper-button-next {
@@ -195,6 +244,8 @@
   background-image: url('@img/arrow-next.svg');
   width: 40px;
   height: 40px;
+  transform: translateY(-50%);
+  margin-top: 0;
 }
 
 .swiper-pagination-bullets.swiper-pagination-horizontal {

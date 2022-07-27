@@ -430,6 +430,7 @@ button.swiper-pagination-bullet {
 /* Указываем box sizing */
 html {
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 *,
@@ -457,7 +458,6 @@ dd {
 /* Выставляем основные настройки по-умолчанию для body */
 body {
   min-height: 100vh;
-  scroll-behavior: smooth;
   text-rendering: optimizeSpeed;
   line-height: 1.15;
 }
@@ -704,11 +704,51 @@ select {
   background-image: url("../img/tag-fill.svg");
 }
 
+.download-btn {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 10px 20px 10px 15px;
+  border: 1px solid #666;
+  border-radius: 40px;
+  color: #666;
+  font-size: 12px;
+  line-height: 1.2;
+  transition: 0.3s;
+}
+.download-btn:hover, .download-btn:focus {
+  color: #222;
+  border-color: #222;
+}
+.download-btn:hover .download-btn__icon, .download-btn:focus .download-btn__icon {
+  stroke: #222;
+}
+.download-btn--white {
+  border: 1px solid #f5f5f5;
+  color: #f5f5f5;
+}
+.download-btn--white:hover, .download-btn--white:focus {
+  border: 1px solid #e9e9e9;
+  color: #e9e9e9;
+}
+.download-btn--white:hover .download-btn__icon, .download-btn--white:focus .download-btn__icon {
+  stroke: #e9e9e9;
+}
+.download-btn__icon {
+  stroke: #666;
+  transition: stroke 0.3s;
+  margin-right: 10px;
+}
+.download-btn__icon--white {
+  stroke: #f5f5f5;
+}
+
 .swiper-button-prev {
   left: -50px;
   background-image: url("../img/arrow-prev.svg");
   width: 40px;
   height: 40px;
+  transform: translateY(-50%);
 }
 
 .swiper-button-next {
@@ -716,6 +756,8 @@ select {
   background-image: url("../img/arrow-next.svg");
   width: 40px;
   height: 40px;
+  transform: translateY(-50%);
+  margin-top: 0;
 }
 
 .swiper-pagination-bullets.swiper-pagination-horizontal {
@@ -734,6 +776,7 @@ select {
 
 .header {
   height: 100vh;
+  background-color: #e9e9e9;
   background-image: url("../img/smoke.png");
   background-size: cover;
 }
@@ -765,30 +808,6 @@ select {
 }
 .header__contacts-link:hover, .header__contacts-link:focus {
   color: #222;
-}
-.header__btn {
-  position: relative;
-  display: flex;
-  align-items: center;
-  padding: 10px 20px 10px 15px;
-  border: 1px solid #666;
-  border-radius: 40px;
-  color: #666;
-  font-size: 12px;
-  line-height: 1.2;
-  transition: 0.3s;
-}
-.header__btn:hover, .header__btn:focus {
-  color: #222;
-  border-color: #222;
-}
-.header__btn:hover .header__btn-icon, .header__btn:focus .header__btn-icon {
-  stroke: #222;
-}
-.header__btn-icon {
-  stroke: #666;
-  transition: stroke 0.3s;
-  margin-right: 10px;
 }
 .header__content {
   flex-grow: 1;

@@ -59,13 +59,9 @@ const cardsSwiper800 = new Swiper('.swiper-cards--800', {
   },
   slidesPerView: 4,
   slidesPerGroup: 4,
-  observer: true,
-  observeParents: true,
-  observeSlideChildren: true,
 });
 
 const cardsSwiper1000 = new Swiper('.swiper-cards--1000', {
-  loop: true,
   speed: 500,
   spaceBetween: 30,
   navigation: {
@@ -81,7 +77,6 @@ const cardsSwiper1000 = new Swiper('.swiper-cards--1000', {
 });
 
 const cardsSwiper1500 = new Swiper('.swiper-cards--1500', {
-  loop: true,
   speed: 500,
   spaceBetween: 30,
   navigation: {
@@ -97,7 +92,6 @@ const cardsSwiper1500 = new Swiper('.swiper-cards--1500', {
 });
 
 const cardsSwiper3000 = new Swiper('.swiper-cards--3000', {
-  loop: true,
   speed: 500,
   spaceBetween: 30,
   navigation: {
@@ -113,7 +107,6 @@ const cardsSwiper3000 = new Swiper('.swiper-cards--3000', {
 });
 
 const cardsSwiper4000 = new Swiper('.swiper-cards--4000', {
-  loop: true,
   speed: 500,
   spaceBetween: 30,
   navigation: {
@@ -129,7 +122,6 @@ const cardsSwiper4000 = new Swiper('.swiper-cards--4000', {
 });
 
 const cardsSwiperReusable = new Swiper('.swiper-cards--reusable', {
-  loop: true,
   speed: 500,
   spaceBetween: 30,
   navigation: {
@@ -145,7 +137,6 @@ const cardsSwiperReusable = new Swiper('.swiper-cards--reusable', {
 });
 
 const cardsSwiperCartriges = new Swiper('.swiper-cards--cartiges', {
-  loop: true,
   speed: 500,
   spaceBetween: 30,
   navigation: {
@@ -161,7 +152,6 @@ const cardsSwiperCartriges = new Swiper('.swiper-cards--cartiges', {
 });
 
 const cardsSwiper12salt = new Swiper('.swiper-cards--12salt', {
-  loop: true,
   speed: 500,
   spaceBetween: 30,
   navigation: {
@@ -177,7 +167,6 @@ const cardsSwiper12salt = new Swiper('.swiper-cards--12salt', {
 });
 
 const cardsSwiper20salt = new Swiper('.swiper-cards--20salt', {
-  loop: true,
   speed: 500,
   spaceBetween: 30,
   navigation: {
