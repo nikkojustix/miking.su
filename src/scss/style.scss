@@ -1,8 +1,11 @@
+@import '../../node_modules/swiper/swiper';
+@import '../../node_modules/swiper/modules/navigation/navigation.scss';
+@import '../../node_modules/swiper/modules/pagination/pagination.scss';
+@import '../../node_modules/swiper/modules/effect-fade/effect-fade';
 @import 'reset';
 @import 'fonts';
 @import 'vars';
 @import 'global';
-@import '../../node_modules/swiper/swiper';
-@import '../../node_modules/swiper/modules/effect-fade/effect-fade';
 
 @import 'header';
+@import 'one-off';

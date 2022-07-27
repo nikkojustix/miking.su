@@ -1,4 +1,4 @@
-body {
+.body {
   background-color: $color-white;
   font-family: $font-family-primary;
   font-size: $font-size-regular;
@@ -22,5 +22,187 @@ body {
 .container {
   max-width: calc($container-width + $container-padding * 2) + px;
   margin: 0 auto;
-  padding: $container-padding + px;
+  padding: 0 $container-padding + px;
+}
+
+.section {
+  margin-top: 120px;
+  &__title {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 40px;
+    padding-right: 105px;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 1.5;
+    text-transform: uppercase;
+    color: $color-primary-dark;
+
+    &::after {
+      position: absolute;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      content: '';
+      width: 80px;
+      height: 34px;
+      background-image: url('@img/e-cig-outline.svg');
+      background-size: cover;
+    }
+  }
+
+  &__slider {
+    position: relative;
+    margin-bottom: 30px;
+  }
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  max-width: 270px;
+  border: 1px solid $color-primary;
+  border-radius: 20px;
+  box-sizing: border-box;
+
+  &__img {
+    height: 230px;
+    margin-bottom: 20px;
+    object-fit: fill;
+  }
+
+  &__title {
+    margin-bottom: 20px;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.5;
+    text-align: center;
+    color: $color-primary-dark;
+  }
+
+  &__descr {
+    margin-bottom: 20px;
+    font-size: 14px;
+    line-height: 1.5;
+    text-align: center;
+    color: $color-primary;
+  }
+}
+
+.btn {
+  padding: 5px 15px;
+  color: $color-white;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.5;
+  text-transform: uppercase;
+  background-color: $color-primary;
+  border: 1px solid transparent;
+  border-radius: 10px;
+  cursor: pointer;
+  outline: none;
+  transition: 0.3s;
+
+  &:hover,
+  &:focus {
+    color: $color-primary;
+    background-color: $color-white;
+    border-color: $color-primary;
+  }
+
+  &--outline {
+    padding: 10px;
+    background-color: transparent;
+    text-transform: none;
+    border-color: $color-primary-light;
+    color: $color-primary-light;
+
+    &:hover,
+    &:focus,
+    &--active {
+      border-color: $color-primary-dark;
+      color: $color-primary-dark;
+    }
+  }
+}
+
+.tabs {
+  &__nav {
+    display: flex;
+    margin: 0 0 40px;
+    padding: 0;
+  }
+
+  &__nav-item {
+    list-style-type: none;
+    & + & {
+      margin-left: 20px;
+    }
+  }
+  &__nav-btn {
+    font-size: 20px;
+  }
+}
+
+.filter {
+  display: flex;
+  margin: 0 0 40px;
+  padding: 0;
+
+  &__item {
+    list-style-type: none;
+    & + & {
+      margin-left: 20px;
+    }
+  }
+
+  &__btn {
+    position: relative;
+    padding: 0 10px 0 35px;
+    font-size: 14px;
+    text-transform: uppercase;
+    &::before {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 10px;
+      content: '';
+      width: 20px;
+      height: 20px;
+      background-image: url('@img/tag-outline.svg');
+    }
+    &--active::before {
+      background-image: url('@img/tag-fill.svg');
+    }
+  }
+}
+
+.swiper-button-prev {
+  left: -50px;
+  background-image: url('@img/arrow-prev.svg');
+  width: 40px;
+  height: 40px;
+}
+
+.swiper-button-next {
+  right: -50px;
+  background-image: url('@img/arrow-next.svg');
+  width: 40px;
+  height: 40px;
+}
+
+.swiper-pagination-bullets.swiper-pagination-horizontal {
+  bottom: -30px;
+}
+
+.swiper-pagination-bullet {
+  width: 10px;
+  height: 10px;
+  background-color: $color-primary-light;
+  cursor: pointer;
+  &-active {
+    background-color: $color-primary-dark;
+  }
 }

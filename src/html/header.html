@@ -33,7 +33,24 @@
         <nav class="menu">
           <ul class="menu__list">
             <li class="menu__item">
-              <a class="menu__link menu__link--dropdown" href="">Продукция</a>
+              <a class="menu__link menu__link--dropdown" href="#">
+                Продукция
+                <svg class="menu__dropdown-icon" width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <g clip-path="url(#clip0_100_222)">
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M0.469507 3.09571C0.624302 2.94532 0.860023 2.95899 1.0303 3.09571L5.33335 7L9.6364 3.09571C9.80667 2.95899 10.0425 2.94532 10.1973 3.09571C10.3521 3.2461 10.3672 3.5036 10.197 3.64032L5.53359 7.8205C5.41963 7.92265 5.24706 7.92265 5.1331 7.8205L0.469736 3.64032C0.299462 3.5036 0.314713 3.2461 0.469507 3.09571Z"
+                      fill=""
+                    />
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_100_222">
+                      <rect width="10" height="10" fill="white" transform="translate(0.333496 10) rotate(-90)" />
+                    </clipPath>
+                  </defs>
+                </svg>
+              </a>
               <ul class="menu__submenu">
                 <li class="menu__submenu-item">
                   <a href="" class="menu__submenu-link">одноразовые</a>
@@ -61,12 +78,53 @@
           </ul>
         </nav>
         <div class="header__contacts">
-          <a class="header__link" href="tel:+79789125522">+7(978)912-55-22</a>
-          <a class="header__link" href="mailto:zakaz@miking.su">zakaz@miking.su</a>
+          <a class="header__contacts-link" href="tel:+79789125522">+7 (978) 912-55-22</a>
+          <a class="header__contacts-link" href="mailto:zakaz@miking.su"> zakaz@miking.su</a>
         </div>
-        <a class="header__btn" href="#">Получить прайс-лист<br />с оптовыми ценами</a>
+        <a class="header__btn" href="#">
+          <svg class="header__btn-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M12.5 13.125H15.4692C17.6175 13.125 19.375 12.2967 19.375 10.1717C19.375 8.04667 17.305 7.30167 15.625 7.21917C15.2775 3.89583 12.8517 1.875 10 1.875C7.305 1.875 5.56917 3.66333 5 5.4375C2.65583 5.66 0.625 6.83917 0.625 9.28083C0.625 11.7233 2.73417 13.125 5.3125 13.125H7.5"
+              stroke=""
+              stroke-width="0.833333"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+            <path
+              d="M7.5 15.6317L10 18.1275L12.5 15.6317"
+              stroke=""
+              stroke-width="0.833333"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+            <path d="M10 8.75V17.5008" stroke="" stroke-width="0.833333" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+          Получить прайс-лист<br />с оптовыми ценами
+        </a>
       </div>
-      <div class="header__content"></div>
+      <div class="header__content">
+        <h1 class="header__title">Электронные сигареты<br />картриджы<br />жидкости</h1>
+        <div class="header__slider">
+          <div class="swiper swiper-header">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <img class="header__img" src="@img/header-img-1.png" alt="miking" />
+              </div>
+              <div class="swiper-slide">
+                <img class="header__img" src="@img/header-img-2.png" alt="mkbar" />
+              </div>
+              <div class="swiper-slide">
+                <img class="header__img" src="@img/header-img-3.png" alt="sidia" />
+              </div>
+              <div class="swiper-slide">
+                <img class="header__img" src="@img/header-img-4.png" alt="jumbo juice" />
+              </div>
+            </div>
+          </div>
+          <div class="swiper-button-prev swiper-button-prev--header"></div>
+          <div class="swiper-button-next swiper-button-next--header"></div>
+        </div>
+      </div>
     </div>
   </div>
 </header>
