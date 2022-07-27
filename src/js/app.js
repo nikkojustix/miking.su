@@ -1,6 +1,5 @@
 import * as flsFunctions from './modules/functions.js';
 import Swiper from 'swiper/bundle';
-import { Navigation } from 'swiper';
 
 flsFunctions.isWebp();
 
@@ -19,7 +18,6 @@ const logoSwiper = new Swiper('.header__logo', {
 
 const menuDropdown = document.querySelector('.menu__link--dropdown');
 const menuSubmenu = document.querySelector('.menu__submenu');
-
 document.addEventListener('click', (e) => {
   if (e.target !== menuDropdown) {
     menuSubmenu.classList.remove('menu__submenu--opened');
@@ -81,6 +79,7 @@ const cardsSwiper1000 = new Swiper('.swiper-cards--1000', {
   slidesPerView: 4,
   slidesPerGroup: 4,
 });
+
 const cardsSwiper1500 = new Swiper('.swiper-cards--1500', {
   loop: true,
   speed: 500,
@@ -96,6 +95,7 @@ const cardsSwiper1500 = new Swiper('.swiper-cards--1500', {
   slidesPerView: 4,
   slidesPerGroup: 4,
 });
+
 const cardsSwiper3000 = new Swiper('.swiper-cards--3000', {
   loop: true,
   speed: 500,
@@ -111,6 +111,7 @@ const cardsSwiper3000 = new Swiper('.swiper-cards--3000', {
   slidesPerView: 4,
   slidesPerGroup: 4,
 });
+
 const cardsSwiper4000 = new Swiper('.swiper-cards--4000', {
   loop: true,
   speed: 500,
@@ -126,6 +127,7 @@ const cardsSwiper4000 = new Swiper('.swiper-cards--4000', {
   slidesPerView: 4,
   slidesPerGroup: 4,
 });
+
 const cardsSwiperReusable = new Swiper('.swiper-cards--reusable', {
   loop: true,
   speed: 500,
@@ -141,6 +143,7 @@ const cardsSwiperReusable = new Swiper('.swiper-cards--reusable', {
   slidesPerView: 4,
   slidesPerGroup: 4,
 });
+
 const cardsSwiperCartriges = new Swiper('.swiper-cards--cartiges', {
   loop: true,
   speed: 500,
@@ -156,6 +159,7 @@ const cardsSwiperCartriges = new Swiper('.swiper-cards--cartiges', {
   slidesPerView: 4,
   slidesPerGroup: 4,
 });
+
 const cardsSwiper12salt = new Swiper('.swiper-cards--12salt', {
   loop: true,
   speed: 500,
@@ -171,6 +175,7 @@ const cardsSwiper12salt = new Swiper('.swiper-cards--12salt', {
   slidesPerView: 4,
   slidesPerGroup: 4,
 });
+
 const cardsSwiper20salt = new Swiper('.swiper-cards--20salt', {
   loop: true,
   speed: 500,
@@ -187,8 +192,8 @@ const cardsSwiper20salt = new Swiper('.swiper-cards--20salt', {
   slidesPerGroup: 4,
 });
 
-flsFunctions.tabs('.tabs__nav-btn--one-off', '.tabs__content-item', 'tabs__nav-btn--active');
-flsFunctions.tabs('.tabs__nav-btn--liquids', '.tabs__content-item', 'tabs__nav-btn--active');
+flsFunctions.tabs('.tabs__nav-btn--one-off', '.one-off .tabs__content-item', 'btn--active');
+flsFunctions.tabs('.tabs__nav-btn--liquids', '.liquids .tabs__content-item', 'btn--active');
 
 // cardsSwiper800.updateSlides();
 flsFunctions.filter(cardsSwiper800);

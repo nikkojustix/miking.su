@@ -120,11 +120,15 @@
     color: $color-primary-light;
 
     &:hover,
-    &:focus,
-    &--active {
+    &:focus {
       border-color: $color-primary-dark;
       color: $color-primary-dark;
     }
+  }
+
+  &--active {
+    border-color: $color-primary-dark;
+    color: $color-primary-dark;
   }
 }
 

@@ -649,7 +649,11 @@ select {
   border-color: #666;
   color: #666;
 }
-.btn--outline:hover, .btn--outline:focus, .btn--outline--active {
+.btn--outline:hover, .btn--outline:focus {
+  border-color: #222;
+  color: #222;
+}
+.btn--active {
   border-color: #222;
   color: #222;
 }

@@ -10,11 +10,6 @@ export function isWebp() {
   testWebP(function (support) {
     let className = support == true ? 'webp' : 'no-webp';
     document.querySelector('html').classList.add(className);
-    // if (support == true) {
-    //   document.querySelector('body').classList.add('webp');
-    // } else {
-    //   document.querySelector('body').classList.add('no-webp');
-    // }
   });
 }
 
