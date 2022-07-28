@@ -3,6 +3,9 @@ import Swiper from 'swiper/bundle';
 
 flsFunctions.isWebp();
 
+// get current year
+document.querySelector('.current-year').innerHTML = new Date().getFullYear();
+
 const logoSwiper = new Swiper('.header__logo', {
   speed: 500,
   autoplay: {
@@ -53,6 +56,8 @@ const sliderConfig = {
   slidesPerGroup: 4,
 };
 
+const productSwipers = [];
+
 const cardsSwiper800 = new Swiper('.swiper-cards--800', {
   ...sliderConfig,
   navigation: {
@@ -64,6 +69,7 @@ const cardsSwiper800 = new Swiper('.swiper-cards--800', {
     clickable: true,
   },
 });
+productSwipers.push(cardsSwiper800);
 
 const cardsSwiper1000 = new Swiper('.swiper-cards--1000', {
   ...sliderConfig,
@@ -76,6 +82,7 @@ const cardsSwiper1000 = new Swiper('.swiper-cards--1000', {
     clickable: true,
   },
 });
+productSwipers.push(cardsSwiper1000);
 
 const cardsSwiper1500 = new Swiper('.swiper-cards--1500', {
   ...sliderConfig,
@@ -88,6 +95,7 @@ const cardsSwiper1500 = new Swiper('.swiper-cards--1500', {
     clickable: true,
   },
 });
+productSwipers.push(cardsSwiper1500);
 
 const cardsSwiper3000 = new Swiper('.swiper-cards--3000', {
   ...sliderConfig,
@@ -100,6 +108,7 @@ const cardsSwiper3000 = new Swiper('.swiper-cards--3000', {
     clickable: true,
   },
 });
+productSwipers.push(cardsSwiper3000);
 
 const cardsSwiper4000 = new Swiper('.swiper-cards--4000', {
   ...sliderConfig,
@@ -112,6 +121,7 @@ const cardsSwiper4000 = new Swiper('.swiper-cards--4000', {
     clickable: true,
   },
 });
+productSwipers.push(cardsSwiper4000);
 
 const cardsSwiperReusable = new Swiper('.swiper-cards--reusable', {
   ...sliderConfig,
@@ -124,6 +134,7 @@ const cardsSwiperReusable = new Swiper('.swiper-cards--reusable', {
     clickable: true,
   },
 });
+productSwipers.push(cardsSwiperReusable);
 
 const cardsSwiperCartriges = new Swiper('.swiper-cards--cartiges', {
   ...sliderConfig,
@@ -136,6 +147,7 @@ const cardsSwiperCartriges = new Swiper('.swiper-cards--cartiges', {
     clickable: true,
   },
 });
+productSwipers.push(cardsSwiperCartriges);
 
 const cardsSwiper12salt = new Swiper('.swiper-cards--12salt', {
   ...sliderConfig,
@@ -148,6 +160,7 @@ const cardsSwiper12salt = new Swiper('.swiper-cards--12salt', {
     clickable: true,
   },
 });
+productSwipers.push(cardsSwiper12salt);
 
 const cardsSwiper20salt = new Swiper('.swiper-cards--20salt', {
   ...sliderConfig,
@@ -160,11 +173,10 @@ const cardsSwiper20salt = new Swiper('.swiper-cards--20salt', {
     clickable: true,
   },
 });
+productSwipers.push(cardsSwiper20salt);
 
 flsFunctions.tabs('.tabs__nav-btn--one-off', '.one-off .tabs__content-item', 'btn--active');
 flsFunctions.tabs('.tabs__nav-btn--liquids', '.liquids .tabs__content-item', 'btn--active');
-
-// flsFunctions.filter(cardsSwiper800);
 
 const sectionSlider = document.querySelectorAll('.section__slider');
 
@@ -180,7 +192,7 @@ sectionSlider.forEach((slider, i) => {
   if (ids.length > 1) {
     const filter = createFilterNode(i, ids);
     slider.parentNode.insertBefore(filter, slider);
-    flsFunctions.filter('.filter' + i);
+    flsFunctions.filter('.filter' + i, productSwipers[i]);
   }
 });
 

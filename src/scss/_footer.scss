@@ -1,0 +1,55 @@
+.footer {
+  margin-top: 120px;
+  padding: 80px 0 40px;
+  background-color: $color-primary-dark;
+  color: $color-white;
+
+  &__content {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    margin-bottom: 80px;
+  }
+
+  &__info {
+  }
+
+  &__info-title {
+    margin-bottom: 20px;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.5;
+  }
+
+  &__info-inner {
+    line-height: 1.5;
+  }
+
+  &__link {
+    display: block;
+    line-height: 1.5;
+    color: inherit;
+    transition: 0.3s;
+
+    & + & {
+      margin-top: 10px;
+    }
+
+    &:hover,
+    &:focus {
+      color: $color-white-darker;
+    }
+  }
+
+  &__btn {
+    margin-top: 20px;
+  }
+
+  &__copy {
+    font-size: 14px;
+    line-height: 1.5;
+    & + & {
+      margin-top: 20px;
+    }
+  }
+}

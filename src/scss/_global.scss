@@ -68,7 +68,7 @@
   box-sizing: border-box;
 
   &__img {
-    height: 230px;
+    max-height: 228px;
     margin-bottom: 20px;
     object-fit: fill;
   }
@@ -95,7 +95,7 @@
   padding: 5px 15px;
   color: $color-white;
   font-weight: 500;
-  font-size: 18px;
+  font-size: 16px;
   line-height: 1.5;
   text-transform: uppercase;
   background-color: $color-primary;
