@@ -46,9 +46,15 @@ const headerSwiper = new Swiper('.swiper-header', {
   },
 });
 
-const cardsSwiper800 = new Swiper('.swiper-cards--800', {
+const sliderConfig = {
   speed: 500,
   spaceBetween: 30,
+  slidesPerView: 4,
+  slidesPerGroup: 4,
+};
+
+const cardsSwiper800 = new Swiper('.swiper-cards--800', {
+  ...sliderConfig,
   navigation: {
     nextEl: '.swiper-button-next--800',
     prevEl: '.swiper-button-prev--800',
@@ -57,13 +63,10 @@ const cardsSwiper800 = new Swiper('.swiper-cards--800', {
     el: '.swiper-pagination--800',
     clickable: true,
   },
-  slidesPerView: 4,
-  slidesPerGroup: 4,
 });
 
 const cardsSwiper1000 = new Swiper('.swiper-cards--1000', {
-  speed: 500,
-  spaceBetween: 30,
+  ...sliderConfig,
   navigation: {
     nextEl: '.swiper-button-next--1000',
     prevEl: '.swiper-button-prev--1000',
@@ -72,13 +75,10 @@ const cardsSwiper1000 = new Swiper('.swiper-cards--1000', {
     el: '.swiper-pagination--1000',
     clickable: true,
   },
-  slidesPerView: 4,
-  slidesPerGroup: 4,
 });
 
 const cardsSwiper1500 = new Swiper('.swiper-cards--1500', {
-  speed: 500,
-  spaceBetween: 30,
+  ...sliderConfig,
   navigation: {
     nextEl: '.swiper-button-next--1500',
     prevEl: '.swiper-button-prev--1500',
@@ -87,13 +87,10 @@ const cardsSwiper1500 = new Swiper('.swiper-cards--1500', {
     el: '.swiper-pagination--1500',
     clickable: true,
   },
-  slidesPerView: 4,
-  slidesPerGroup: 4,
 });
 
 const cardsSwiper3000 = new Swiper('.swiper-cards--3000', {
-  speed: 500,
-  spaceBetween: 30,
+  ...sliderConfig,
   navigation: {
     nextEl: '.swiper-button-next--3000',
     prevEl: '.swiper-button-prev--3000',
@@ -102,13 +99,10 @@ const cardsSwiper3000 = new Swiper('.swiper-cards--3000', {
     el: '.swiper-pagination--3000',
     clickable: true,
   },
-  slidesPerView: 4,
-  slidesPerGroup: 4,
 });
 
 const cardsSwiper4000 = new Swiper('.swiper-cards--4000', {
-  speed: 500,
-  spaceBetween: 30,
+  ...sliderConfig,
   navigation: {
     nextEl: '.swiper-button-next--4000',
     prevEl: '.swiper-button-prev--4000',
@@ -117,13 +111,10 @@ const cardsSwiper4000 = new Swiper('.swiper-cards--4000', {
     el: '.swiper-pagination--4000',
     clickable: true,
   },
-  slidesPerView: 4,
-  slidesPerGroup: 4,
 });
 
 const cardsSwiperReusable = new Swiper('.swiper-cards--reusable', {
-  speed: 500,
-  spaceBetween: 30,
+  ...sliderConfig,
   navigation: {
     nextEl: '.swiper-button-next--reusable',
     prevEl: '.swiper-button-prev--reusable',
@@ -132,13 +123,10 @@ const cardsSwiperReusable = new Swiper('.swiper-cards--reusable', {
     el: '.swiper-pagination--reusable',
     clickable: true,
   },
-  slidesPerView: 4,
-  slidesPerGroup: 4,
 });
 
 const cardsSwiperCartriges = new Swiper('.swiper-cards--cartiges', {
-  speed: 500,
-  spaceBetween: 30,
+  ...sliderConfig,
   navigation: {
     nextEl: '.swiper-button-next--cartiges',
     prevEl: '.swiper-button-prev--cartiges',
@@ -147,13 +135,10 @@ const cardsSwiperCartriges = new Swiper('.swiper-cards--cartiges', {
     el: '.swiper-pagination--cartiges',
     clickable: true,
   },
-  slidesPerView: 4,
-  slidesPerGroup: 4,
 });
 
 const cardsSwiper12salt = new Swiper('.swiper-cards--12salt', {
-  speed: 500,
-  spaceBetween: 30,
+  ...sliderConfig,
   navigation: {
     nextEl: '.swiper-button-next--12salt',
     prevEl: '.swiper-button-prev--12salt',
@@ -162,13 +147,10 @@ const cardsSwiper12salt = new Swiper('.swiper-cards--12salt', {
     el: '.swiper-pagination--12salt',
     clickable: true,
   },
-  slidesPerView: 4,
-  slidesPerGroup: 4,
 });
 
 const cardsSwiper20salt = new Swiper('.swiper-cards--20salt', {
-  speed: 500,
-  spaceBetween: 30,
+  ...sliderConfig,
   navigation: {
     nextEl: '.swiper-button-next--20salt',
     prevEl: '.swiper-button-prev--20salt',
@@ -177,12 +159,49 @@ const cardsSwiper20salt = new Swiper('.swiper-cards--20salt', {
     el: '.swiper-pagination--20salt',
     clickable: true,
   },
-  slidesPerView: 4,
-  slidesPerGroup: 4,
 });
 
 flsFunctions.tabs('.tabs__nav-btn--one-off', '.one-off .tabs__content-item', 'btn--active');
 flsFunctions.tabs('.tabs__nav-btn--liquids', '.liquids .tabs__content-item', 'btn--active');
 
-// cardsSwiper800.updateSlides();
-flsFunctions.filter(cardsSwiper800);
+// flsFunctions.filter(cardsSwiper800);
+
+const sectionSlider = document.querySelectorAll('.section__slider');
+
+sectionSlider.forEach((slider, i) => {
+  const cards = slider.querySelectorAll('.card');
+  let ids = [];
+  cards.forEach((card) => {
+    const id = card.dataset.id;
+    if (id && !ids.includes(id)) {
+      ids.push(id);
+    }
+  });
+  if (ids.length > 1) {
+    const filter = createFilterNode(i, ids);
+    slider.parentNode.insertBefore(filter, slider);
+    flsFunctions.filter('.filter' + i);
+  }
+});
+
+function createFilterNode(index, ids) {
+  const ul = document.createElement('ul');
+  ul.classList.add('filter', 'filter' + index);
+  for (let i = 0; i < ids.length + 1; i++) {
+    const li = document.createElement('li');
+    li.classList.add('filter__item');
+    const btn = document.createElement('button');
+    btn.classList.add('filter__btn', 'btn', 'btn--outline');
+    if (i == 0) {
+      btn.classList.add('filter__btn--active');
+      btn.dataset.id = 'all';
+      btn.innerText = 'все';
+    } else {
+      btn.dataset.id = ids[i - 1];
+      btn.innerText = ids[i - 1];
+    }
+    li.appendChild(btn);
+    ul.appendChild(li);
+  }
+  return ul;
+}

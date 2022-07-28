@@ -41,8 +41,8 @@ export function tabs(tabSelector, contentSelector, activeClass) {
   });
 }
 
-export function filter(swiper) {
-  const list = document.querySelectorAll('.filter__btn');
+export function filter(selector) {
+  const list = document.querySelectorAll(selector + ' .filter__btn');
   const items = document.querySelectorAll('.filter~* .card');
   list.forEach((item) => {
     item.addEventListener('click', (e) => {
@@ -64,7 +64,7 @@ export function filter(swiper) {
           }
         });
       }
-      swiper.update();
+      // swiper.update();
     });
   });
 }
