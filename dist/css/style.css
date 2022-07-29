@@ -766,7 +766,7 @@ select {
   background-image: url("../img/arrow-prev-darker.svg");
 }
 .swiper-button-prev--header {
-  transform: translate(-100%, -100%);
+  transform: translate(-50%, -100%);
   background-image: url("../img/arrow-prev-stroke.svg");
 }
 .swiper-button-prev--header:hover, .swiper-button-prev--header:focus {
@@ -782,7 +782,7 @@ select {
   background-image: url("../img/arrow-next-darker.svg");
 }
 .swiper-button-next--header {
-  transform: translate(100%, -100%);
+  transform: translate(50%, -100%);
   background-image: url("../img/arrow-next-stroke.svg");
 }
 .swiper-button-next--header:hover, .swiper-button-next--header:focus {
@@ -848,10 +848,16 @@ select {
   align-items: center;
   padding-bottom: 100px;
 }
+.header__title-box {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
 .header__title {
   font-size: 40px;
   line-height: 2;
   text-transform: uppercase;
+  margin-bottom: 60px;
 }
 .header__slider {
   position: relative;
@@ -949,6 +955,14 @@ select {
   color: #222;
 }
 
+@media (max-width: 1279px) {
+  .header__title {
+    font-size: 36px;
+  }
+  .header__slider {
+    max-width: 400px;
+  }
+}
 .brands__list {
   display: grid;
   grid-template-columns: repeat(4, 1fr);

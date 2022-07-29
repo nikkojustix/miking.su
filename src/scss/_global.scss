@@ -257,7 +257,7 @@
   }
 
   &--header {
-    transform: translate(-100%, -100%);
+    transform: translate(-50%, -100%);
     background-image: url('@img/arrow-prev-stroke.svg');
     &:hover,
     &:focus {
@@ -277,7 +277,7 @@
   }
 
   &--header {
-    transform: translate(100%, -100%);
+    transform: translate(50%, -100%);
     background-image: url('@img/arrow-next-stroke.svg');
     &:hover,
     &:focus {
