@@ -26,7 +26,7 @@
 }
 
 .section {
-  margin-top: 120px;
+  margin-top: 100px;
   &__title {
     position: relative;
     display: inline-block;
@@ -68,9 +68,10 @@
   box-sizing: border-box;
 
   &__img {
-    max-height: 228px;
+    width: 100%;
+    aspect-ratio: 1;
     margin-bottom: 20px;
-    object-fit: fill;
+    object-fit: contain;
   }
 
   &__title {
@@ -239,6 +240,8 @@
 
 .swiper-slide {
   height: auto;
+  display: flex;
+  justify-content: center;
 }
 
 .swiper-button-prev,
@@ -302,5 +305,92 @@
   cursor: pointer;
   &-active {
     background-color: $color-primary-dark;
+  }
+}
+
+@media (max-width: 999px) {
+  .section {
+    margin-top: 80px;
+    &__title {
+      font-size: 26px;
+    }
+  }
+
+  .tabs {
+    &__nav {
+      overflow: auto;
+      margin-bottom: 30px;
+    }
+    &__nav-btn {
+      font-size: 18px;
+      padding: 5px 10px;
+      white-space: nowrap;
+    }
+  }
+
+  .filter {
+    margin-bottom: 30px;
+  }
+
+  .card {
+    &__img {
+      max-height: 246px;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .section {
+    margin-top: 80px;
+    &__title {
+      font-size: 20px;
+      padding-right: 80px;
+      &::after {
+        width: 60px;
+        height: 26px;
+      }
+    }
+  }
+
+  .tabs {
+    &__nav {
+      margin-bottom: 20px;
+    }
+    &__nav-btn {
+      font-size: 16px;
+    }
+  }
+
+  .filter {
+    margin-bottom: 20px;
+    overflow: auto;
+    &__btn {
+      text-transform: none;
+    }
+  }
+
+  .card {
+    &__img {
+      max-height: 288px;
+    }
+    &__title {
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+    &__btn {
+      font-size: 13px;
+    }
+  }
+}
+
+@media (max-width: 479px) {
+  .card {
+    &__img {
+      max-height: 360px;
+    }
+  }
+
+  .filter__item + .filter__item {
+    margin-left: 10px;
   }
 }

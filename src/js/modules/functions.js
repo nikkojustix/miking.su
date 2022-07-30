@@ -64,7 +64,7 @@ export function filter(selector, swiper) {
           }
         });
       }
-      swiper.update();
+      swiper.updateSlides();
     });
   });
 }
