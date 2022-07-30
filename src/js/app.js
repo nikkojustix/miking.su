@@ -4,7 +4,27 @@ import Swiper from 'swiper/bundle';
 flsFunctions.isWebp();
 
 // get current year
-document.querySelector('.current-year').innerHTML = new Date().getFullYear();
+// document.querySelector('.current-year').innerHTML = new Date().getFullYear();
+
+// mobile menu
+const menuBtn = document.querySelector('.menu-btn');
+menuBtn.addEventListener('click', (e) => {
+  e.preventDefault();
+  const menu = document.querySelector('.menu');
+  const menuList = document.querySelector('.menu__list');
+  menuBtn.classList.toggle('menu-btn--opened');
+  menu.classList.toggle('menu--opened');
+  document.body.classList.toggle('locked');
+  menuList.classList.toggle('menu__list--opened');
+  menu.addEventListener('click', (e) => {
+    if (e.target === menu || (e.target.href && e.target.href != 'javascript:void(0);')) {
+      menuBtn.classList.remove('menu-btn--opened');
+      menuList.classList.remove('menu__list--opened');
+      menu.classList.remove('menu--opened');
+      document.body.classList.remove('locked');
+    }
+  });
+});
 
 const logoSwiper = new Swiper('.header__logo', {
   speed: 500,
