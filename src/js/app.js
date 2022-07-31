@@ -4,7 +4,7 @@ import Swiper from 'swiper/bundle';
 flsFunctions.isWebp();
 
 // get current year
-// document.querySelector('.current-year').innerHTML = new Date().getFullYear();
+document.querySelector('.current-year').innerHTML = new Date().getFullYear();
 
 // mobile menu
 const menuBtn = document.querySelector('.menu-btn');
