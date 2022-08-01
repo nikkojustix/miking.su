@@ -269,3 +269,40 @@ scrollBtn.addEventListener('click', () => {
     behavior: 'smooth',
   });
 });
+
+function setCookie(cname, cvalue, exdays) {
+  var d = new Date();
+  d.setTime(d.getTime() + exdays * 24 * 60 * 60 * 1000);
+  var expires = 'expires=' + d.toGMTString();
+  document.cookie = cname + '=' + cvalue + ';' + expires + ';path=/';
+}
+
+function getCookie(name) {
+  var value = '; ' + document.cookie;
+  var parts = value.split('; ' + name + '=');
+  if (parts.length == 2) return parts.pop().split(';').shift();
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  const agreement = document.querySelector('#agreement');
+  if (!getCookie('testAge')) {
+    agreement.style.display = 'flex';
+    document.body.classList.add('locked');
+    const btnYes = document.querySelector('.modal__btn--yes');
+    const btnNo = document.querySelector('.modal__btn--no');
+    btnYes.addEventListener('click', (e) => {
+      e.preventDefault();
+      agreement.style.display = 'none';
+      document.body.classList.remove('locked');
+      setCookie('testAge', true, 365);
+    });
+    btnNo.addEventListener('click', (e) => {
+      e.preventDefault();
+      agreement.style.display = 'none';
+      document.body.classList.remove('locked');
+      window.location.replace('http://ya.ru');
+    });
+  }
+});
+
+flsFunctions.bindModal(null, '#agreement');

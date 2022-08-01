@@ -249,6 +249,10 @@
   margin-top: 0;
   width: 40px;
   height: 40px;
+  color: transparent;
+  &::after {
+    display: none;
+  }
 }
 
 .swiper-button-prev {
@@ -339,6 +343,85 @@
   }
 }
 
+//modal
+.modal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  display: none;
+
+  &__inner {
+    padding: 50px;
+    margin: 20px;
+    width: 300px;
+    border-radius: 20px;
+    background-color: $color-white;
+  }
+
+  &__title {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  &__close {
+    cursor: pointer;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  &__btns {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__btn {
+    padding: 10px 20px;
+    border-radius: 20px;
+    background-color: $color-primary;
+    color: $color-white;
+    border: none;
+    font-size: 20px;
+    font-weight: 700;
+    cursor: pointer;
+    &--yes {
+      background-color: #4caf50;
+      margin-right: 20px;
+      width: 80px;
+    }
+    &--no {
+      background-color: #e02525;
+      color: $color-primary-dark;
+      width: 80px;
+    }
+  }
+
+  &--agreement {
+    .modal__inner {
+      width: 500px;
+      background-color: $color-primary;
+    }
+    .modal__title {
+      margin-bottom: 20px;
+      font-size: 30px;
+      font-weight: 600;
+      text-align: center;
+      color: $color-white;
+    }
+    .modal__text {
+      font-size: 16px;
+      margin-bottom: 20px;
+      text-align: center;
+      color: $color-white;
+    }
+  }
+}
+
 @media (max-width: 999px) {
   .section {
     margin-top: 80px;
@@ -423,5 +506,16 @@
 
   .filter__item + .filter__item {
     margin-left: 10px;
+  }
+
+  .modal {
+    &__inner {
+      padding: 40px 20px;
+    }
+    &--agreement {
+      .modal__title {
+        font-size: 22px;
+      }
+    }
   }
 }
