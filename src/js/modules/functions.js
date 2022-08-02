@@ -70,17 +70,19 @@ export function filter(selector, swiper) {
 }
 
 // modal
-export function bindModal(trigger, modal, close) {
-  trigger = document.querySelector(trigger);
+export function bindModal(triggers, modal, close) {
+  triggers = document.querySelectorAll(triggers);
   modal = document.querySelector(modal);
   close = document.querySelector(close);
 
   const body = document.body;
-  if (trigger != null) {
-    trigger.addEventListener('click', (e) => {
-      e.preventDefault();
-      modal.style.display = 'flex';
-      body.classList.add('locked');
+  if (triggers != null) {
+    triggers.forEach((trigger) => {
+      trigger.addEventListener('click', (e) => {
+        e.preventDefault();
+        modal.style.display = 'flex';
+        body.classList.add('locked');
+      });
     });
   }
   close.addEventListener('click', () => {

@@ -359,20 +359,27 @@
   &__inner {
     padding: 50px;
     margin: 20px;
-    width: 300px;
+    width: 450px;
     border-radius: 20px;
     background-color: $color-white;
+    position: relative;
+  }
+
+  &__header {
   }
 
   &__title {
     text-align: center;
     margin-bottom: 20px;
+    font-size: 24px;
+    font-weight: 600;
   }
 
   &__close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
     cursor: pointer;
-    display: flex;
-    justify-content: flex-end;
   }
 
   &__btns {
@@ -387,17 +394,38 @@
     color: $color-white;
     border: none;
     font-size: 20px;
-    font-weight: 700;
+    font-weight: 500;
     cursor: pointer;
     &--yes {
       background-color: #4caf50;
       margin-right: 20px;
       width: 80px;
+      font-weight: 700;
     }
     &--no {
       background-color: #e02525;
       color: $color-primary-dark;
       width: 80px;
+      font-weight: 700;
+    }
+  }
+
+  .order {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &__input {
+      margin-bottom: 20px;
+      padding: 10px 20px;
+      border: 1px solid $color-primary;
+      color: $color-primary;
+      font-size: 20px;
+      font-weight: 500;
+      border-radius: 10px;
+      background-color: transparent;
+      width: 100%;
+      max-width: 100%;
     }
   }
 
