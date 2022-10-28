@@ -98,14 +98,26 @@ const sliderConfig = {
     480: {
       slidesPerView: 2,
       slidesPerGroup: 2,
+      grid: {
+        rows: 2,
+        fill: 'row',
+      },
     },
     768: {
       slidesPerView: 3,
       slidesPerGroup: 3,
+      grid: {
+        rows: 2,
+        fill: 'row',
+      },
     },
     1000: {
       slidesPerView: 4,
       slidesPerGroup: 4,
+      grid: {
+        rows: 2,
+        fill: 'row',
+      },
     },
   },
 };
@@ -121,10 +133,6 @@ const cardsSwiper800 = new Swiper('.swiper-cards--800', {
   pagination: {
     el: '.swiper-pagination--800',
     clickable: true,
-  },
-  grid: {
-    rows: 2,
-    fill: 'row',
   },
 });
 productSwipers.push(cardsSwiper800);

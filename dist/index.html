@@ -108,26 +108,7 @@
       <div class="header__content">
         <div class="header__title-box">
           <h1 class="header__title">Электронные&nbspсигареты<br />картриджи<br />жидкости</h1>
-          <a class="header__btn download-btn" href="../files/price.xlsx">
-            <svg class="download-btn__icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path
-                d="M12.5 13.125H15.4692C17.6175 13.125 19.375 12.2967 19.375 10.1717C19.375 8.04667 17.305 7.30167 15.625 7.21917C15.2775 3.89583 12.8517 1.875 10 1.875C7.305 1.875 5.56917 3.66333 5 5.4375C2.65583 5.66 0.625 6.83917 0.625 9.28083C0.625 11.7233 2.73417 13.125 5.3125 13.125H7.5"
-                stroke=""
-                stroke-width="0.833333"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-              <path
-                d="M7.5 15.6317L10 18.1275L12.5 15.6317"
-                stroke=""
-                stroke-width="0.833333"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-              <path d="M10 8.75V17.5008" stroke="" stroke-width="0.833333" stroke-linecap="round" stroke-linejoin="round" />
-            </svg>
-            Получить прайс-лист<br />с оптовыми ценами
-          </a>
+          <button class="btn btn--filled btn--download">Получить прайс-лист<br />с оптовыми ценами</button>
         </div>
         <div class="header__slider">
           <div class="swiper swiper-header">
@@ -157,11 +138,136 @@
 
       <main class="main">
         <!-- 1 -->
-        <section class="section one-off" id="one-off">
+        <section class="section catalog one-off" id="one-off">
   <div class="container">
     <div class="section__inner">
       <h2 class="section__title">Одноразовые электронные сигареты</h2>
-      <div class="tabs">
+      <div class="catalog__brands">
+        <button class="catalog__brands-btn btn btn--active">
+          <img class="catalog__brands-img" src="img/brands/miking-logo.png" alt="Miking" />
+          Miking
+        </button>
+        <button class="catalog__brands-btn btn">
+          <img class="catalog__brands-img" src="img/brands/mkbar-logo.png" alt="Mk Bar" />
+          Mk Bar
+        </button>
+        <button class="catalog__brands-btn btn">
+          <img class="catalog__brands-img" src="img/brands/sidia.png" alt="Sidia" />
+          Sidia
+        </button>
+      </div>
+
+      <div class="catalog__filter">
+        <button class="catalog__filter-btn btn btn--active">800 затяжек</button>
+        <button class="catalog__filter-btn btn">1000 затяжек</button>
+        <button class="catalog__filter-btn btn">1500 затяжек</button>
+        <button class="catalog__filter-btn btn">3000 затяжек</button>
+        <button class="catalog__filter-btn btn">4000 затяжек</button>
+        <button class="catalog__filter-btn btn">5000 затяжек</button>
+        <button class="catalog__filter-btn btn">6000 затяжек</button>
+      </div>
+
+      <div class="catalog__info">
+        <ul class="catalog__info-list">
+          <li class="catalog__info-item">
+            <span class="catalog__info-descr">Мощность аккумулятра</span>
+            <span class="catalog__info-value">550mAh</span>
+          </li>
+          <li class="catalog__info-item">
+            <span class="catalog__info-descr">Тип аккумулятра</span>
+            <span class="catalog__info-value">Не заряжаемый</span>
+          </li>
+          <li class="catalog__info-item">
+            <span class="catalog__info-descr">Объем жидкости</span>
+            <span class="catalog__info-value">3,2Мл</span>
+          </li>
+          <li class="catalog__info-item">
+            <span class="catalog__info-descr">Количество затяжек</span>
+            <span class="catalog__info-value">до 800</span>
+          </li>
+          <li class="catalog__info-item">
+            <span class="catalog__info-descr">Никотин</span>
+            <span class="catalog__info-value">20мг/мл</span>
+          </li>
+          <li class="catalog__info-item">
+            <span class="catalog__info-descr">Тип никотина</span>
+            <span class="catalog__info-value">Солевой</span>
+          </li>
+        </ul>
+        <button class="catalog__info-btn btn btn--filled btn--download">Получить прайс-лист<br />с оптовыми ценами</button>
+      </div>
+
+      <div class="section__slider">
+        <div class="swiper swiper-cards swiper-cards--800">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="card" data-id="miking">
+                <img class="card__img" src="img/miking 800/банан.png" alt="" />
+                <h3 class="card__title">Банан</h3>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="card" data-id="sidia">
+                <img class="card__img" src="img/miking 800/дыня кокос.png" alt="" />
+                <h3 class="card__title">дыня кокос</h3>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="card" data-id="miking">
+                <img class="card__img" src="img/miking 800/жвачка.png" alt="" />
+                <h3 class="card__title">жвачка</h3>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="card" data-id="miking">
+                <img class="card__img" src="img/miking 800/киви гранат.png" alt="" />
+                <h3 class="card__title">киви гранат</h3>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="card" data-id="miking">
+                <img class="card__img" src="img/miking 800/киви гуава маракуйя.png" alt="" />
+                <h3 class="card__title">киви гуава маракуйя</h3>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="card" data-id="sidia">
+                <img class="card__img" src="img/miking 800/кислое яблоко.png" alt="" />
+                <h3 class="card__title">кислое яблоко</h3>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="card" data-id="miking">
+                <img class="card__img" src="img/miking 800/клубника арбуз.png" alt="" />
+                <h3 class="card__title">клубника арбуз</h3>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="card" data-id="miking">
+                <img class="card__img" src="img/miking 800/клубника банан.png" alt="" />
+                <h3 class="card__title">клубника банан</h3>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="card" data-id="miking">
+                <img class="card__img" src="img/miking 800/клубника банан.png" alt="" />
+                <h3 class="card__title">клубника банан</h3>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="card" data-id="miking">
+                <img class="card__img" src="img/miking 800/клубника банан.png" alt="" />
+                <h3 class="card__title">клубника банан</h3>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-button-prev swiper-button-prev--800"></div>
+        <div class="swiper-button-next swiper-button-next--800"></div>
+        <div class="swiper-pagination swiper-pagination--800"></div>
+      </div>
+
+      <!-- <div class="tabs">
         <ul class="tabs__nav">
           <li class="tabs__nav-item"><button class="tabs__nav-btn tabs__nav-btn--one-off btn btn--outline">800 затяжек</button></li>
           <li class="tabs__nav-item"><button class="tabs__nav-btn tabs__nav-btn--one-off btn btn--outline">1000 затяжек</button></li>
@@ -547,7 +653,7 @@
             </div>
           </div>
         </div>
-      </div>
+      </div> -->
     </div>
   </div>
 </section>
@@ -972,33 +1078,7 @@
         <p class="footer__info-inner">
           <a class="footer__link" href="mailto:zakaz@miking.su">zakaz@miking.su</a>
         </p>
-        <a class="footer__btn download-btn download-btn--white" href="../files/price.xlsx">
-          <svg
-            class="download-btn__icon download-btn__icon--white"
-            width="20"
-            height="20"
-            viewBox="0 0 20 20"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M12.5 13.125H15.4692C17.6175 13.125 19.375 12.2967 19.375 10.1717C19.375 8.04667 17.305 7.30167 15.625 7.21917C15.2775 3.89583 12.8517 1.875 10 1.875C7.305 1.875 5.56917 3.66333 5 5.4375C2.65583 5.66 0.625 6.83917 0.625 9.28083C0.625 11.7233 2.73417 13.125 5.3125 13.125H7.5"
-              stroke=""
-              stroke-width="0.833333"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            />
-            <path
-              d="M7.5 15.6317L10 18.1275L12.5 15.6317"
-              stroke=""
-              stroke-width="0.833333"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            />
-            <path d="M10 8.75V17.5008" stroke="" stroke-width="0.833333" stroke-linecap="round" stroke-linejoin="round" />
-          </svg>
-          Получить прайс-лист<br />с оптовыми ценами
-        </a>
+        <button class="btn btn--white btn--download footer__btn">Получить прайс-лист<br />с оптовыми ценами</button>
       </div>
     </div>
     <p class="footer__copy">ООО "ЭлитГрупп" Эксклюзивный дистрибьютор торговых марок "Mikig", "Sidia" , "MK Bar" , "Jumbo Juice"</p>
