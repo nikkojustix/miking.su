@@ -604,16 +604,14 @@ select {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 20px;
-  max-width: 270px;
+  padding: 0 20px;
+  width: 270px;
   height: 100%;
-  border: 1px solid #444;
-  border-radius: 20px;
   box-sizing: border-box;
 }
 .card__img {
   width: 100%;
-  aspect-ratio: 1;
+  height: 230px;
   margin-bottom: 20px;
   object-fit: contain;
 }
@@ -670,8 +668,12 @@ select {
   border-color: #ccc;
 }
 .btn--active {
-  border-color: #222;
-  color: #222;
+  border-color: #444;
+  color: #f5f5f5;
+  background-color: #444;
+}
+.btn--active:hover {
+  color: #f5f5f5;
 }
 .btn--download {
   padding-left: 50px;
@@ -733,46 +735,6 @@ select {
 }
 .filter__btn--active::before {
   background-image: url("../img/tag-fill.svg");
-}
-
-.download-btn {
-  position: relative;
-  display: flex;
-  align-items: center;
-  padding: 10px 20px 10px 15px;
-  border: 1px solid #666;
-  border-radius: 40px;
-  color: #666;
-  font-size: 12px;
-  line-height: 1.2;
-  transition: 0.3s;
-  appearance: none;
-}
-.download-btn:hover, .download-btn:focus {
-  color: #222;
-  border-color: #222;
-}
-.download-btn:hover .download-btn__icon, .download-btn:focus .download-btn__icon {
-  stroke: #222;
-}
-.download-btn--white {
-  border: 1px solid #f5f5f5;
-  color: #f5f5f5;
-}
-.download-btn--white:hover, .download-btn--white:focus {
-  border: 1px solid #e9e9e9;
-  color: #e9e9e9;
-}
-.download-btn--white:hover .download-btn__icon, .download-btn--white:focus .download-btn__icon {
-  stroke: #e9e9e9;
-}
-.download-btn__icon {
-  stroke: #666;
-  transition: stroke 0.3s;
-  margin-right: 10px;
-}
-.download-btn__icon--white {
-  stroke: #f5f5f5;
 }
 
 .swiper-slide {
@@ -1036,19 +998,66 @@ select {
     font-size: 22px;
   }
 }
+.catalog__brands-trigger, .catalog__filter-trigger {
+  position: relative;
+  padding: 10px 40px 10px 10px;
+  border: 1px solid #444;
+  border-radius: 10px;
+  font-size: 18px;
+  font-weight: 600;
+  text-transform: uppercase;
+  display: none;
+}
+.catalog__brands-trigger::after, .catalog__filter-trigger::after {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 10px;
+  content: "";
+  width: 16px;
+  height: 14px;
+  background-image: url("../img/arrow-down.svg");
+  background-size: cover;
+  transition: 0.3s;
+}
+.catalog__brands-trigger--active, .catalog__filter-trigger--active {
+  border-bottom-right-radius: 0px;
+  border-bottom-left-radius: 0px;
+}
+.catalog__brands-trigger--active::after, .catalog__filter-trigger--active::after {
+  transform: translateY(-50%) rotate(180deg);
+}
+.catalog__filter-trigger {
+  font-size: 16px;
+  text-transform: none;
+}
 .catalog__brands-btn {
   margin-right: 20px;
   margin-bottom: 20px;
   font-size: 20px;
-  font-weight: 700;
+  font-weight: 600;
   text-transform: uppercase;
   display: inline-flex;
   align-items: center;
 }
+.catalog__brands-btn.btn--active .catalog__brands-img--normal {
+  opacity: 0;
+}
+.catalog__brands-btn.btn--active .catalog__brands-img--white {
+  opacity: 1;
+}
 .catalog__brands-img {
-  height: 30px;
-  object-fit: cover;
+  height: 35px;
+  width: 40px;
+  object-fit: contain;
   margin-right: 10px;
+  transition: 0.3s;
+}
+.catalog__brands-img--normal {
+  position: absolute;
+}
+.catalog__brands-img--white {
+  opacity: 0;
 }
 .catalog__filter-btn {
   font-size: 16px;
@@ -1075,6 +1084,52 @@ select {
 }
 .catalog__info-value {
   font-weight: 600;
+}
+
+@media (max-width: 767px) {
+  .catalog__brands, .catalog__filter {
+    margin-bottom: 20px;
+  }
+  .catalog__brands-trigger, .catalog__filter-trigger {
+    display: flex;
+    align-items: center;
+  }
+  .catalog__brands-trigger-img {
+    width: 30px;
+    height: 24px;
+    margin-right: 10px;
+  }
+  .catalog__brands-list, .catalog__filter-list {
+    display: none;
+  }
+  .catalog__brands-list--opened, .catalog__filter-list--opened {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #444;
+    border-radius: 10px;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+  }
+  .catalog__brands-btn, .catalog__filter-btn {
+    margin: 0;
+    border: none;
+    border-radius: 0px;
+    border-bottom: 1px solid #444;
+    font-size: 18px;
+  }
+  .catalog__brands-btn:last-child, .catalog__filter-btn:last-child {
+    border-bottom: 0px;
+  }
+  .catalog__brands-btn:hover, .catalog__filter-btn:hover {
+    background-color: #ccc;
+  }
+  .catalog__brands-btn.btn--active, .catalog__filter-btn.btn--active {
+    background-color: #ccc;
+    color: #444;
+  }
+  .catalog__brands-img {
+    display: none;
+  }
 }
 .header {
   background-color: #e9e9e9;

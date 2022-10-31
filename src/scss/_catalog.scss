@@ -1,24 +1,76 @@
 .catalog {
-  &__brands {
+  &__brands-trigger,
+  &__filter-trigger {
+    position: relative;
+    padding: 10px 40px 10px 10px;
+    border: 1px solid $color-primary;
+    border-radius: 10px;
+    font-size: 18px;
+    font-weight: 600;
+    text-transform: uppercase;
+    display: none;
+
+    &::after {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      right: 10px;
+      content: '';
+      width: 16px;
+      height: 14px;
+      background-image: url('@img/arrow-down.svg');
+      background-size: cover;
+      transition: 0.3s;
+    }
+
+    &--active {
+      border-bottom-right-radius: 0px;
+      border-bottom-left-radius: 0px;
+
+      &::after {
+        transform: translateY(-50%) rotate(180deg);
+      }
+    }
+  }
+
+  &__filter-trigger {
+    font-size: 16px;
+    text-transform: none;
   }
 
   &__brands-btn {
     margin-right: 20px;
     margin-bottom: 20px;
     font-size: 20px;
-    font-weight: 700;
+    font-weight: 600;
     text-transform: uppercase;
     display: inline-flex;
     align-items: center;
+
+    &.btn--active {
+      .catalog__brands-img--normal {
+        opacity: 0;
+      }
+      .catalog__brands-img--white {
+        opacity: 1;
+      }
+    }
   }
 
   &__brands-img {
-    height: 30px;
-    object-fit: cover;
+    height: 35px;
+    width: 40px;
+    object-fit: contain;
     margin-right: 10px;
-  }
+    transition: 0.3s;
 
-  &__filter {
+    &--normal {
+      position: absolute;
+    }
+
+    &--white {
+      opacity: 0;
+    }
   }
 
   &__filter-btn {
@@ -54,7 +106,65 @@
   &__info-value {
     font-weight: 600;
   }
+}
 
-  &__info-btn {
+@media (max-width: 767px) {
+  .catalog {
+    &__brands,
+    &__filter {
+      margin-bottom: 20px;
+    }
+
+    &__brands-trigger,
+    &__filter-trigger {
+      display: flex;
+      align-items: center;
+    }
+
+    &__brands-trigger-img {
+      width: 30px;
+      height: 24px;
+      margin-right: 10px;
+    }
+
+    &__brands-list,
+    &__filter-list {
+      display: none;
+
+      &--opened {
+        display: flex;
+        flex-direction: column;
+        border: 1px solid $color-primary;
+        border-radius: 10px;
+        border-top-left-radius: 0px;
+        border-top-right-radius: 0px;
+      }
+    }
+
+    &__brands-btn,
+    &__filter-btn {
+      margin: 0;
+      border: none;
+      border-radius: 0px;
+      border-bottom: 1px solid $color-primary;
+      font-size: 18px;
+
+      &:last-child {
+        border-bottom: 0px;
+      }
+
+      &:hover {
+        background-color: $color-white-darker;
+      }
+
+      &.btn--active {
+        background-color: $color-white-darker;
+        color: $color-primary;
+      }
+    }
+
+    &__brands-img {
+      display: none;
+    }
   }
 }

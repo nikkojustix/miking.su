@@ -122,6 +122,52 @@ const sliderConfig = {
   },
 };
 
+const cardsSwiperOneoff = new Swiper('.swiper-cards--one-off', {
+  ...sliderConfig,
+  navigation: {
+    nextEl: '.swiper-button-next--one-off',
+    prevEl: '.swiper-button-prev--one-off',
+  },
+  pagination: {
+    el: '.swiper-pagination--one-off',
+    clickable: true,
+  },
+});
+
+const brandsBtns = document.querySelectorAll('.catalog__brands-btn');
+const filterBtns = document.querySelectorAll('.catalog__filter-btn');
+const oneoffCards = document.querySelectorAll('.swiper-cards--one-off .card');
+
+brandsBtns.forEach((btn) => {
+  btn.addEventListener('click', (e) => {
+    brandsBtns.forEach((btn) => {
+      btn.classList.remove('btn--active');
+    });
+    btn.classList.add('btn--active');
+    const brandName = e.target.dataset.name;
+    console.log(oneoffCards);
+
+    oneoffCards.forEach((card) => {
+      if (card.dataset.name === brandName) {
+        card.parentNode.style.display = 'block';
+      } else {
+        card.parentNode.style.display = 'none';
+      }
+    });
+
+    cardsSwiperOneoff.updateSlides();
+  });
+});
+
+filterBtns.forEach((btn) => {
+  btn.addEventListener('click', () => {
+    filterBtns.forEach((btn) => {
+      btn.classList.remove('btn--active');
+    });
+    btn.classList.add('btn--active');
+  });
+});
+
 const productSwipers = [];
 
 const cardsSwiper800 = new Swiper('.swiper-cards--800', {

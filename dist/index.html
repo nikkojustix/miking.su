@@ -143,28 +143,42 @@
     <div class="section__inner">
       <h2 class="section__title">Одноразовые электронные сигареты</h2>
       <div class="catalog__brands">
-        <button class="catalog__brands-btn btn btn--active">
-          <img class="catalog__brands-img" src="img/brands/miking-logo.png" alt="Miking" />
-          Miking
-        </button>
-        <button class="catalog__brands-btn btn">
-          <img class="catalog__brands-img" src="img/brands/mkbar-logo.png" alt="Mk Bar" />
-          Mk Bar
-        </button>
-        <button class="catalog__brands-btn btn">
-          <img class="catalog__brands-img" src="img/brands/sidia.png" alt="Sidia" />
-          Sidia
-        </button>
+        <div class="catalog__brands-trigger">
+          <img class="catalog__brands-trigger-img" src="img/brands/new/miking-normal.png" alt="" />
+          <span class="catalog__brands-trigger-text">miking</span>
+        </div>
+        <div class="catalog__brands-list">
+          <button class="catalog__brands-btn btn btn--active" data-name="miking">
+            <img class="catalog__brands-img catalog__brands-img--normal" src="img/brands/new/miking-normal.png" alt="Miking" />
+            <img class="catalog__brands-img catalog__brands-img--white" src="img/brands/new/miking-white.png" alt="Miking" />
+            Miking
+          </button>
+          <button class="catalog__brands-btn btn" data-name="mkbar">
+            <img class="catalog__brands-img catalog__brands-img--normal" src="img/brands/new/mkbar-normal.png" alt="Mk Bar" />
+            <img class="catalog__brands-img catalog__brands-img--white" src="img/brands/new/mkbar-white.png" alt="Mk Bar" />
+            Mk Bar
+          </button>
+          <button class="catalog__brands-btn btn" data-name="sidia">
+            <img class="catalog__brands-img catalog__brands-img--normal" src="img/brands/new/sidia-normal.png" alt="Sidia" />
+            <img class="catalog__brands-img catalog__brands-img--white" src="img/brands/new/sidia-white.png" alt="Sidia" />
+            Sidia
+          </button>
+        </div>
       </div>
 
       <div class="catalog__filter">
-        <button class="catalog__filter-btn btn btn--active">800 затяжек</button>
-        <button class="catalog__filter-btn btn">1000 затяжек</button>
-        <button class="catalog__filter-btn btn">1500 затяжек</button>
-        <button class="catalog__filter-btn btn">3000 затяжек</button>
-        <button class="catalog__filter-btn btn">4000 затяжек</button>
-        <button class="catalog__filter-btn btn">5000 затяжек</button>
-        <button class="catalog__filter-btn btn">6000 затяжек</button>
+        <div class="catalog__filter-trigger">
+          <span class="catalog__filter-trigger-text">800 затяжек</span>
+        </div>
+        <div class="catalog__filter-list">
+          <button class="catalog__filter-btn btn btn--active">800 затяжек</button>
+          <button class="catalog__filter-btn btn">1000 затяжек</button>
+          <button class="catalog__filter-btn btn">1500 затяжек</button>
+          <button class="catalog__filter-btn btn">3000 затяжек</button>
+          <button class="catalog__filter-btn btn">4000 затяжек</button>
+          <button class="catalog__filter-btn btn">5000 затяжек</button>
+          <button class="catalog__filter-btn btn">6000 затяжек</button>
+        </div>
       </div>
 
       <div class="catalog__info">
@@ -198,73 +212,367 @@
       </div>
 
       <div class="section__slider">
-        <div class="swiper swiper-cards swiper-cards--800">
+        <div class="swiper swiper-cards swiper-cards--one-off">
           <div class="swiper-wrapper">
             <div class="swiper-slide">
-              <div class="card" data-id="miking">
+              <div class="card" data-name="miking" data-puff="800">
                 <img class="card__img" src="img/miking 800/банан.png" alt="" />
                 <h3 class="card__title">Банан</h3>
               </div>
             </div>
             <div class="swiper-slide">
-              <div class="card" data-id="sidia">
+              <div class="card" data-name="miking" data-puff="800">
                 <img class="card__img" src="img/miking 800/дыня кокос.png" alt="" />
                 <h3 class="card__title">дыня кокос</h3>
               </div>
             </div>
             <div class="swiper-slide">
-              <div class="card" data-id="miking">
+              <div class="card" data-name="miking" data-puff="800">
                 <img class="card__img" src="img/miking 800/жвачка.png" alt="" />
                 <h3 class="card__title">жвачка</h3>
               </div>
             </div>
             <div class="swiper-slide">
-              <div class="card" data-id="miking">
+              <div class="card" data-name="miking" data-puff="800">
                 <img class="card__img" src="img/miking 800/киви гранат.png" alt="" />
                 <h3 class="card__title">киви гранат</h3>
               </div>
             </div>
             <div class="swiper-slide">
-              <div class="card" data-id="miking">
+              <div class="card" data-name="miking" data-puff="800">
                 <img class="card__img" src="img/miking 800/киви гуава маракуйя.png" alt="" />
                 <h3 class="card__title">киви гуава маракуйя</h3>
               </div>
             </div>
             <div class="swiper-slide">
-              <div class="card" data-id="sidia">
+              <div class="card" data-name="miking" data-puff="800">
                 <img class="card__img" src="img/miking 800/кислое яблоко.png" alt="" />
                 <h3 class="card__title">кислое яблоко</h3>
               </div>
             </div>
             <div class="swiper-slide">
-              <div class="card" data-id="miking">
+              <div class="card" data-name="miking" data-puff="800">
                 <img class="card__img" src="img/miking 800/клубника арбуз.png" alt="" />
                 <h3 class="card__title">клубника арбуз</h3>
               </div>
             </div>
             <div class="swiper-slide">
-              <div class="card" data-id="miking">
+              <div class="card" data-name="miking" data-puff="800">
                 <img class="card__img" src="img/miking 800/клубника банан.png" alt="" />
                 <h3 class="card__title">клубника банан</h3>
               </div>
             </div>
             <div class="swiper-slide">
-              <div class="card" data-id="miking">
-                <img class="card__img" src="img/miking 800/клубника банан.png" alt="" />
+              <div class="card" data-name="miking" data-puff="800">
+                <img class="card__img" src="img/miking 800/клубника редбулл.png" alt="" />
+                <h3 class="card__title">клубника редбулл</h3>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="card" data-name="miking" data-puff="800">
+                <img class="card__img" src="img/miking 800/клубничное мороженое.png" alt="" />
+                <h3 class="card__title">Клубничное мороженое</h3>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="card" data-name="miking" data-puff="800">
+                <img class="card__img" src="img/miking 800/кола.png" alt="" />
+                <h3 class="card__title">кола</h3>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="card" data-name="miking" data-puff="800">
+                <img class="card__img" src="img/miking 800/ледяной персик.png" alt="" />
+                <h3 class="card__title">ледяной персик</h3>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="card" data-name="miking" data-puff="800">
+                <img class="card__img" src="img/miking 800/лимонад из черники и малины.png" alt="" />
+                <h3 class="card__title">лимонад из черники и малины</h3>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="card" data-name="miking" data-puff="800">
+                <img class="card__img" src="img/miking 800/манго персик арбуз.png" alt="" />
+                <h3 class="card__title">манго персик арбуз</h3>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="card" data-name="miking" data-puff="800">
+                <img class="card__img" src="img/miking 800/молочный банан.png" alt="" />
+                <h3 class="card__title">молочный банан</h3>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="card" data-name="miking" data-puff="800">
+                <img class="card__img" src="img/miking 800/пина колада.png" alt="" />
+                <h3 class="card__title">пина колада</h3>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="card" data-name="miking" data-puff="800">
+                <img class="card__img" src="img/miking 800/розовый лимонад.png" alt="" />
+                <h3 class="card__title">розовый лимонад</h3>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="card" data-name="miking" data-puff="800">
+                <img class="card__img" src="img/miking 800/энергетик.png" alt="" />
+                <h3 class="card__title">энергетик</h3>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="card" data-name="miking" data-puff="800">
+                <img class="card__img" src="img/miking 800/яблоко манго.png" alt="" />
+                <h3 class="card__title">яблоко манго</h3>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="card" data-name="miking" data-puff="1500">
+                <img class="card__img" src="img/miking 1500/банан.jpeg" alt="" />
+                <h3 class="card__title">банан</h3>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="card" data-name="miking" data-puff="1500">
+                <img class="card__img" src="img/miking 1500/дыня кокос.jpeg" alt="" />
+                <h3 class="card__title">дыня кокос</h3>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="card" data-name="miking" data-puff="1500">
+                <img class="card__img" src="img/miking 1500/жвачка.jpg" alt="" />
+                <h3 class="card__title">жвачка</h3>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="card" data-name="miking" data-puff="1500">
+                <img class="card__img" src="img/miking 1500/киви гранат.jpeg" alt="" />
+                <h3 class="card__title">киви гранат</h3>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="card" data-name="miking" data-puff="1500">
+                <img class="card__img" src="img/miking 1500/киви гуава маракуйя.jpeg" alt="" />
+                <h3 class="card__title">киви гуава маракуйя</h3>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="card" data-name="miking" data-puff="1500">
+                <img class="card__img" src="img/miking 1500/кислое яблоко.jpeg" alt="" />
+                <h3 class="card__title">кислое яблоко</h3>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="card" data-name="miking" data-puff="1500">
+                <img class="card__img" src="img/miking 1500/клубника арбуз.jpeg" alt="" />
+                <h3 class="card__title">клубника арбуз</h3>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="card" data-name="miking" data-puff="1500">
+                <img class="card__img" src="img/miking 1500/клубника банан.jpeg" alt="" />
                 <h3 class="card__title">клубника банан</h3>
               </div>
             </div>
             <div class="swiper-slide">
-              <div class="card" data-id="miking">
-                <img class="card__img" src="img/miking 800/клубника банан.png" alt="" />
-                <h3 class="card__title">клубника банан</h3>
+              <div class="card" data-name="miking" data-puff="1500">
+                <img class="card__img" src="img/miking 1500/клубника ред булл.jpg" alt="" />
+                <h3 class="card__title">клубника ред булл</h3>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="card" data-name="miking" data-puff="1500">
+                <img class="card__img" src="img/miking 1500/клубничное мороженое.jpeg" alt="" />
+                <h3 class="card__title">клубничное мороженое</h3>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="card" data-name="miking" data-puff="1500">
+                <img class="card__img" src="img/miking 1500/кола.jpeg" alt="" />
+                <h3 class="card__title">кола</h3>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="card" data-name="miking" data-puff="1500">
+                <img class="card__img" src="img/miking 1500/ледяной персик.jpeg" alt="" />
+                <h3 class="card__title">ледяной персик</h3>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="card" data-name="miking" data-puff="1500">
+                <img class="card__img" src="img/miking 1500/лимонад из черники и малины.jpeg" alt="" />
+                <h3 class="card__title">лимонад из черники и малины</h3>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="card" data-name="miking" data-puff="1500">
+                <img class="card__img" src="img/miking 1500/манго персик арбуз.jpeg" alt="" />
+                <h3 class="card__title">манго персик арбуз</h3>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="card" data-name="miking" data-puff="1500">
+                <img class="card__img" src="img/miking 1500/манго.jpeg" alt="" />
+                <h3 class="card__title">манго</h3>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="card" data-name="miking" data-puff="1500">
+                <img class="card__img" src="img/miking 1500/молочный банан.jpeg" alt="" />
+                <h3 class="card__title">молочный банан</h3>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="card" data-name="miking" data-puff="1500">
+                <img class="card__img" src="img/miking 1500/пина колада.jpeg" alt="" />
+                <h3 class="card__title">пина колада</h3>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="card" data-name="miking" data-puff="1500">
+                <img class="card__img" src="img/miking 1500/розовый лимонад.jpeg" alt="" />
+                <h3 class="card__title">розовый лимонад</h3>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="card" data-name="miking" data-puff="1500">
+                <img class="card__img" src="img/miking 1500/энергетик.jpeg" alt="" />
+                <h3 class="card__title">энергетик</h3>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="card" data-name="miking" data-puff="1500">
+                <img class="card__img" src="img/miking 1500/яблоко манго.jpeg" alt="" />
+                <h3 class="card__title">яблоко манго</h3>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="card" data-name="mkbar" data-puff="1500">
+                <img class="card__img" src="img/mk bar 1500/new/ананас.jpg" alt="" />
+                <h3 class="card__title">ананас</h3>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="card" data-name="mkbar" data-puff="1500">
+                <img class="card__img" src="img/mk bar 1500/new/апельсин манго гуава.jpg" alt="" />
+                <h3 class="card__title">апельсин манго гуава</h3>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="card" data-name="mkbar" data-puff="1500">
+                <img class="card__img" src="img/mk bar 1500/new/банан.jpg" alt="" />
+                <h3 class="card__title">банан</h3>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="card" data-name="mkbar" data-puff="1500">
+                <img class="card__img" src="img/mk bar 1500/new/банановое молоко.jpg" alt="" />
+                <h3 class="card__title">банановое молоко</h3>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="card" data-name="mkbar" data-puff="1500">
+                <img class="card__img" src="img/mk bar 1500/new/виноград.jpg" alt="" />
+                <h3 class="card__title">виноград</h3>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="card" data-name="mkbar" data-puff="1500">
+                <img class="card__img" src="img/mk bar 1500/new/двойное яблоко.jpg" alt="" />
+                <h3 class="card__title">двойное яблоко</h3>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="card" data-name="mkbar" data-puff="1500">
+                <img class="card__img" src="img/mk bar 1500/new/клубника ананас кокос.jpg" alt="" />
+                <h3 class="card__title">клубника ананас кокос</h3>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="card" data-name="mkbar" data-puff="1500">
+                <img class="card__img" src="img/mk bar 1500/new/клубника киви.jpg" alt="" />
+                <h3 class="card__title">клубника киви</h3>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="card" data-name="mkbar" data-puff="1500">
+                <img class="card__img" src="img/mk bar 1500/new/клюква.jpg" alt="" />
+                <h3 class="card__title">клюква</h3>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="card" data-name="mkbar" data-puff="1500">
+                <img class="card__img" src="img/mk bar 1500/new/кола.jpg" alt="" />
+                <h3 class="card__title">кола</h3>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="card" data-name="mkbar" data-puff="1500">
+                <img class="card__img" src="img/mk bar 1500/new/манго персик арбуз.jpg" alt="" />
+                <h3 class="card__title">манго персик арбуз</h3>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="card" data-name="mkbar" data-puff="1500">
+                <img class="card__img" src="img/mk bar 1500/new/мандарин.jpg" alt="" />
+                <h3 class="card__title">мандарин</h3>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="card" data-name="mkbar" data-puff="1500">
+                <img class="card__img" src="img/mk bar 1500/new/мохито.jpg" alt="" />
+                <h3 class="card__title">мохито</h3>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="card" data-name="mkbar" data-puff="1500">
+                <img class="card__img" src="img/mk bar 1500/new/мята.jpg" alt="" />
+                <h3 class="card__title">мята</h3>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="card" data-name="mkbar" data-puff="1500">
+                <img class="card__img" src="img/mk bar 1500/new/персик.jpg" alt="" />
+                <h3 class="card__title">персик</h3>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="card" data-name="mkbar" data-puff="1500">
+                <img class="card__img" src="img/mk bar 1500/new/редбулл.jpg" alt="" />
+                <h3 class="card__title">редбулл</h3>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="card" data-name="mkbar" data-puff="1500">
+                <img class="card__img" src="img/mk bar 1500/new/черная смородина.jpg" alt="" />
+                <h3 class="card__title">черная смородина</h3>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="card" data-name="mkbar" data-puff="1500">
+                <img class="card__img" src="img/mk bar 1500/new/черника.jpg" alt="" />
+                <h3 class="card__title">черника</h3>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="card" data-name="mkbar" data-puff="1500">
+                <img class="card__img" src="img/mk bar 1500/new/яблоко манго апельсин.jpg" alt="" />
+                <h3 class="card__title">яблоко манго апельсин</h3>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="card" data-name="mkbar" data-puff="1500">
+                <img class="card__img" src="img/mk bar 1500/new/ягодный микс.jpg" alt="" />
+                <h3 class="card__title">ягодный микс</h3>
               </div>
             </div>
           </div>
         </div>
-        <div class="swiper-button-prev swiper-button-prev--800"></div>
-        <div class="swiper-button-next swiper-button-next--800"></div>
-        <div class="swiper-pagination swiper-pagination--800"></div>
+        <div class="swiper-button-prev swiper-button-prev--one-off"></div>
+        <div class="swiper-button-next swiper-button-next--one-off"></div>
+        <div class="swiper-pagination swiper-pagination--one-off"></div>
       </div>
 
       <!-- <div class="tabs">
