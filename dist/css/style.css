@@ -1006,6 +1006,7 @@ select {
   font-size: 18px;
   font-weight: 600;
   text-transform: uppercase;
+  cursor: pointer;
   display: none;
 }
 .catalog__brands-trigger::after, .catalog__filter-trigger::after {
@@ -1018,14 +1019,14 @@ select {
   height: 14px;
   background-image: url("../img/arrow-down.svg");
   background-size: cover;
-  transition: 0.3s;
+  transition: 0.2s;
 }
 .catalog__brands-trigger--active, .catalog__filter-trigger--active {
   border-bottom-right-radius: 0px;
   border-bottom-left-radius: 0px;
 }
 .catalog__brands-trigger--active::after, .catalog__filter-trigger--active::after {
-  transform: translateY(-50%) rotate(180deg);
+  transform: translateY(-50%) rotate(-180deg);
 }
 .catalog__filter-trigger {
   font-size: 16px;

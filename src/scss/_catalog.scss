@@ -8,6 +8,7 @@
     font-size: 18px;
     font-weight: 600;
     text-transform: uppercase;
+    cursor: pointer;
     display: none;
 
     &::after {
@@ -20,7 +21,7 @@
       height: 14px;
       background-image: url('@img/arrow-down.svg');
       background-size: cover;
-      transition: 0.3s;
+      transition: 0.2s;
     }
 
     &--active {
@@ -28,7 +29,7 @@
       border-bottom-left-radius: 0px;
 
       &::after {
-        transform: translateY(-50%) rotate(180deg);
+        transform: translateY(-50%) rotate(-180deg);
       }
     }
   }

@@ -1,5 +1,6 @@
 import * as flsFunctions from './modules/functions.js';
 import Swiper from 'swiper/bundle';
+import IMask from 'imask';
 
 flsFunctions.isWebp();
 
@@ -94,6 +95,10 @@ const sliderConfig = {
   spaceBetween: 30,
   slidesPerView: 1,
   slidesPerGroup: 1,
+  grid: {
+    rows: 2,
+    fill: 'row',
+  },
   breakpoints: {
     480: {
       slidesPerView: 2,
@@ -135,7 +140,13 @@ const cardsSwiperOneoff = new Swiper('.swiper-cards--one-off', {
 });
 
 const brandsBtns = document.querySelectorAll('.catalog__brands-btn');
+const brandsTrigger = document.querySelector('.catalog__brands-trigger');
+const brandsTriggerText = document.querySelector('.catalog__brands-trigger-text');
+const brandsList = document.querySelector('.catalog__brands-list');
 const filterBtns = document.querySelectorAll('.catalog__filter-btn');
+const filterTrigger = document.querySelector('.catalog__filter-trigger');
+const filterTriggerText = document.querySelector('.catalog__filter-trigger-text');
+const filterList = document.querySelector('.catalog__filter-list');
 const oneoffCards = document.querySelectorAll('.swiper-cards--one-off .card');
 
 brandsBtns.forEach((btn) => {
@@ -144,19 +155,45 @@ brandsBtns.forEach((btn) => {
       btn.classList.remove('btn--active');
     });
     btn.classList.add('btn--active');
-    const brandName = e.target.dataset.name;
-    console.log(oneoffCards);
+    brandsTriggerText.innerHTML = btn.innerHTML;
+    brandsTrigger.classList.remove('catalog__brands-trigger--active');
+    brandsList.classList.remove('catalog__brands-list--opened');
+    const brandName = btn.dataset.name;
+    console.log(btn.dataset);
+    const puffs = btn.dataset.puffs.split(',');
+
+    const tmpFilterList = Array.from(filterList.children);
+    console.log(tmpFilterList);
+
+    tmpFilterList.forEach((btn) => {
+      btn.remove();
+    });
+    console.log(filterList.children);
+
+    for (let i = 0; i < puffs.length; i++) {
+      const btn = document.createElement('button');
+      btn.classList.add('btn', 'catalog__filter-btn');
+      btn.dataset.puff = puffs[i];
+      btn.innerText = puffs[i] + ' затяжек';
+      filterList.appendChild(btn);
+      // console.log(filterBtns);
+      // filterBtns.push(btn);
+    }
 
     oneoffCards.forEach((card) => {
       if (card.dataset.name === brandName) {
-        card.parentNode.style.display = 'block';
+        card.parentNode.style.display = 'flex';
       } else {
         card.parentNode.style.display = 'none';
       }
     });
-
-    cardsSwiperOneoff.updateSlides();
+    cardsSwiperOneoff.update();
   });
+});
+
+brandsTrigger.addEventListener('click', () => {
+  brandsTrigger.classList.toggle('catalog__brands-trigger--active');
+  brandsList.classList.toggle('catalog__brands-list--opened');
 });
 
 filterBtns.forEach((btn) => {
@@ -165,7 +202,16 @@ filterBtns.forEach((btn) => {
       btn.classList.remove('btn--active');
     });
     btn.classList.add('btn--active');
+
+    filterTriggerText.innerHTML = btn.innerHTML;
+    filterTrigger.classList.remove('catalog__filter-trigger--active');
+    filterList.classList.remove('catalog__filter-list--opened');
   });
+});
+
+filterTrigger.addEventListener('click', () => {
+  filterTrigger.classList.toggle('catalog__filter-trigger--active');
+  filterList.classList.toggle('catalog__filter-list--opened');
 });
 
 const productSwipers = [];
@@ -287,7 +333,7 @@ const cardsSwiper20salt = new Swiper('.swiper-cards--20salt', {
 });
 productSwipers.push(cardsSwiper20salt);
 
-flsFunctions.tabs('.tabs__nav-btn--one-off', '.one-off .tabs__content-item', 'btn--active');
+// flsFunctions.tabs('.tabs__nav-btn--one-off', '.one-off .tabs__content-item', 'btn--active');
 flsFunctions.tabs('.tabs__nav-btn--liquids', '.liquids .tabs__content-item', 'btn--active');
 
 const sectionSlider = document.querySelectorAll('.section__slider');
