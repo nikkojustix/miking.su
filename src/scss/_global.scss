@@ -28,26 +28,26 @@
 .section {
   margin-top: 100px;
   &__title {
-    position: relative;
-    display: inline-block;
     margin-bottom: 40px;
-    padding-right: 105px;
     font-size: 32px;
     font-weight: 700;
     line-height: 1.5;
     text-transform: uppercase;
     color: $color-primary-dark;
-
-    &::after {
-      position: absolute;
-      right: 0;
-      top: 50%;
-      transform: translateY(-50%);
-      content: '';
-      width: 80px;
-      height: 34px;
-      background-image: url('@img/e-cig-outline.svg');
-      background-size: cover;
+    &-text {
+      position: relative;
+      padding-right: 105px;
+      &::after {
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        content: '';
+        width: 80px;
+        height: 34px;
+        background-image: url('@img/e-cig-outline.svg');
+        background-size: cover;
+      }
     }
   }
 

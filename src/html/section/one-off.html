@@ -1,26 +1,26 @@
 <section class="section catalog one-off" id="one-off">
   <div class="container">
     <div class="section__inner">
-      <h2 class="section__title">Одноразовые электронные сигареты</h2>
+      <h2 class="section__title"><span class="section__title-text">Одноразовые электронные сигареты</span></h2>
       <div class="catalog__brands">
         <div class="catalog__brands-trigger">
-          <img class="catalog__brands-trigger-img" src="@img/brands/new/miking-normal.png" alt="" />
+          <img class="catalog__brands-trigger-img" src="@img/brands/miking-normal.png" alt="" />
           <span class="catalog__brands-trigger-text">miking</span>
         </div>
         <div class="catalog__brands-list">
           <button class="catalog__brands-btn btn btn--active" data-name="miking" data-puffs="800,1000,1500,3000,4000,5000,6000">
-            <img class="catalog__brands-img catalog__brands-img--normal" src="@img/brands/new/miking-normal.png" alt="Miking" />
-            <img class="catalog__brands-img catalog__brands-img--white" src="@img/brands/new/miking-white.png" alt="Miking" />
+            <img class="catalog__brands-img catalog__brands-img--normal" src="@img/brands/miking-normal.png" alt="Miking" />
+            <img class="catalog__brands-img catalog__brands-img--white" src="@img/brands/miking-white.png" alt="Miking" />
             Miking
           </button>
           <button class="catalog__brands-btn btn" data-name="mkbar" data-puffs="1500,3000">
-            <img class="catalog__brands-img catalog__brands-img--normal" src="@img/brands/new/mkbar-normal.png" alt="Mk Bar" />
-            <img class="catalog__brands-img catalog__brands-img--white" src="@img/brands/new/mkbar-white.png" alt="Mk Bar" />
+            <img class="catalog__brands-img catalog__brands-img--normal" src="@img/brands/mkbar-normal.png" alt="Mk Bar" />
+            <img class="catalog__brands-img catalog__brands-img--white" src="@img/brands/mkbar-white.png" alt="Mk Bar" />
             Mk Bar
           </button>
           <button class="catalog__brands-btn btn" data-name="sidia" data-puffs="4000">
-            <img class="catalog__brands-img catalog__brands-img--normal" src="@img/brands/new/sidia-normal.png" alt="Sidia" />
-            <img class="catalog__brands-img catalog__brands-img--white" src="@img/brands/new/sidia-white.png" alt="Sidia" />
+            <img class="catalog__brands-img catalog__brands-img--normal" src="@img/brands/sidia-normal.png" alt="Sidia" />
+            <img class="catalog__brands-img catalog__brands-img--white" src="@img/brands/sidia-white.png" alt="Sidia" />
             Sidia
           </button>
         </div>
@@ -70,7 +70,11 @@
         </ul>
         <button class="catalog__info-btn btn btn--filled btn--download">Получить прайс-лист<br />с оптовыми ценами</button>
       </div>
-
+      <script>
+        document.addEventListener('trigger-changed', (e) => {
+          console.log(e.detail);
+        });
+      </script>
       <div class="section__slider">
         <div class="swiper swiper-cards swiper-cards--one-off">
           <div class="swiper-wrapper">

@@ -143,11 +143,10 @@ const brandsBtns = document.querySelectorAll('.catalog__brands-btn');
 const brandsTrigger = document.querySelector('.catalog__brands-trigger');
 const brandsTriggerText = document.querySelector('.catalog__brands-trigger-text');
 const brandsList = document.querySelector('.catalog__brands-list');
-const filterBtns = document.querySelectorAll('.catalog__filter-btn');
+let filterBtns = document.querySelectorAll('.catalog__filter-btn');
 const filterTrigger = document.querySelector('.catalog__filter-trigger');
 const filterTriggerText = document.querySelector('.catalog__filter-trigger-text');
 const filterList = document.querySelector('.catalog__filter-list');
-const oneoffCards = document.querySelectorAll('.swiper-cards--one-off .card');
 
 brandsBtns.forEach((btn) => {
   btn.addEventListener('click', (e) => {
@@ -155,38 +154,33 @@ brandsBtns.forEach((btn) => {
       btn.classList.remove('btn--active');
     });
     btn.classList.add('btn--active');
+
     brandsTriggerText.innerHTML = btn.innerHTML;
     brandsTrigger.classList.remove('catalog__brands-trigger--active');
     brandsList.classList.remove('catalog__brands-list--opened');
+
     const brandName = btn.dataset.name;
-    console.log(btn.dataset);
     const puffs = btn.dataset.puffs.split(',');
 
-    const tmpFilterList = Array.from(filterList.children);
-    console.log(tmpFilterList);
-
-    tmpFilterList.forEach((btn) => {
+    filterBtns.forEach((btn) => {
       btn.remove();
     });
-    console.log(filterList.children);
-
-    for (let i = 0; i < puffs.length; i++) {
-      const btn = document.createElement('button');
-      btn.classList.add('btn', 'catalog__filter-btn');
-      btn.dataset.puff = puffs[i];
-      btn.innerText = puffs[i] + ' затяжек';
-      filterList.appendChild(btn);
-      // console.log(filterBtns);
-      // filterBtns.push(btn);
-    }
-
-    oneoffCards.forEach((card) => {
-      if (card.dataset.name === brandName) {
-        card.parentNode.style.display = 'flex';
-      } else {
-        card.parentNode.style.display = 'none';
-      }
+    let noActiveFilterBtn = true;
+    puffs.forEach((puff) => {
+      const filterBtn = document.createElement('button');
+      filterBtn.classList.add('btn', 'catalog__filter-btn');
+      filterBtn.dataset.puff = puff;
+      filterBtn.innerHTML = puff + ' затяжек';
+      filterList.appendChild(filterBtn);
     });
+    filterList.firstElementChild.classList.add('btn--active');
+    filterTriggerText.innerHTML = filterList.firstElementChild.innerHTML;
+    filterBtns = document.querySelectorAll('.catalog__filter-btn');
+    cardsSwiperOneoff.removeAllSlides();
+    document.dispatchEvent(
+      new CustomEvent('trigger-changed', { detail: { name: brandName, puff: filterList.firstElementChild.dataset.puff } })
+    );
+    filter(brandName);
     cardsSwiperOneoff.update();
   });
 });
@@ -196,90 +190,28 @@ brandsTrigger.addEventListener('click', () => {
   brandsList.classList.toggle('catalog__brands-list--opened');
 });
 
-filterBtns.forEach((btn) => {
-  btn.addEventListener('click', () => {
-    filterBtns.forEach((btn) => {
-      btn.classList.remove('btn--active');
-    });
-    btn.classList.add('btn--active');
+function filter(brandName) {
+  filterBtns.forEach((btn) => {
+    btn.addEventListener('click', () => {
+      filterBtns.forEach((btn) => {
+        btn.classList.remove('btn--active');
+      });
+      btn.classList.add('btn--active');
 
-    filterTriggerText.innerHTML = btn.innerHTML;
-    filterTrigger.classList.remove('catalog__filter-trigger--active');
-    filterList.classList.remove('catalog__filter-list--opened');
+      filterTriggerText.innerHTML = btn.innerHTML;
+      filterTrigger.classList.remove('catalog__filter-trigger--active');
+      filterList.classList.remove('catalog__filter-list--opened');
+      cardsSwiperOneoff.removeAllSlides();
+      document.dispatchEvent(new CustomEvent('trigger-changed', { detail: { name: brandName, puff: btn.dataset.puff } }));
+    });
   });
-});
+}
+filter(brandsList.firstElementChild.dataset.name);
 
 filterTrigger.addEventListener('click', () => {
   filterTrigger.classList.toggle('catalog__filter-trigger--active');
   filterList.classList.toggle('catalog__filter-list--opened');
 });
-
-const productSwipers = [];
-
-const cardsSwiper800 = new Swiper('.swiper-cards--800', {
-  ...sliderConfig,
-  navigation: {
-    nextEl: '.swiper-button-next--800',
-    prevEl: '.swiper-button-prev--800',
-  },
-  pagination: {
-    el: '.swiper-pagination--800',
-    clickable: true,
-  },
-});
-productSwipers.push(cardsSwiper800);
-
-const cardsSwiper1000 = new Swiper('.swiper-cards--1000', {
-  ...sliderConfig,
-  navigation: {
-    nextEl: '.swiper-button-next--1000',
-    prevEl: '.swiper-button-prev--1000',
-  },
-  pagination: {
-    el: '.swiper-pagination--1000',
-    clickable: true,
-  },
-});
-productSwipers.push(cardsSwiper1000);
-
-const cardsSwiper1500 = new Swiper('.swiper-cards--1500', {
-  ...sliderConfig,
-  navigation: {
-    nextEl: '.swiper-button-next--1500',
-    prevEl: '.swiper-button-prev--1500',
-  },
-  pagination: {
-    el: '.swiper-pagination--1500',
-    clickable: true,
-  },
-});
-productSwipers.push(cardsSwiper1500);
-
-const cardsSwiper3000 = new Swiper('.swiper-cards--3000', {
-  ...sliderConfig,
-  navigation: {
-    nextEl: '.swiper-button-next--3000',
-    prevEl: '.swiper-button-prev--3000',
-  },
-  pagination: {
-    el: '.swiper-pagination--3000',
-    clickable: true,
-  },
-});
-productSwipers.push(cardsSwiper3000);
-
-const cardsSwiper4000 = new Swiper('.swiper-cards--4000', {
-  ...sliderConfig,
-  navigation: {
-    nextEl: '.swiper-button-next--4000',
-    prevEl: '.swiper-button-prev--4000',
-  },
-  pagination: {
-    el: '.swiper-pagination--4000',
-    clickable: true,
-  },
-});
-productSwipers.push(cardsSwiper4000);
 
 const cardsSwiperReusable = new Swiper('.swiper-cards--reusable', {
   ...sliderConfig,
@@ -292,7 +224,6 @@ const cardsSwiperReusable = new Swiper('.swiper-cards--reusable', {
     clickable: true,
   },
 });
-productSwipers.push(cardsSwiperReusable);
 
 const cardsSwiperCartriges = new Swiper('.swiper-cards--cartiges', {
   ...sliderConfig,
@@ -305,76 +236,18 @@ const cardsSwiperCartriges = new Swiper('.swiper-cards--cartiges', {
     clickable: true,
   },
 });
-productSwipers.push(cardsSwiperCartriges);
 
-const cardsSwiper12salt = new Swiper('.swiper-cards--12salt', {
+const cardsSwiperLiquids = new Swiper('.swiper-cards--liquids', {
   ...sliderConfig,
   navigation: {
-    nextEl: '.swiper-button-next--12salt',
-    prevEl: '.swiper-button-prev--12salt',
+    nextEl: '.swiper-button-next--liquids',
+    prevEl: '.swiper-button-prev--liquids',
   },
   pagination: {
-    el: '.swiper-pagination--12salt',
+    el: '.swiper-pagination--liquids',
     clickable: true,
   },
 });
-productSwipers.push(cardsSwiper12salt);
-
-const cardsSwiper20salt = new Swiper('.swiper-cards--20salt', {
-  ...sliderConfig,
-  navigation: {
-    nextEl: '.swiper-button-next--20salt',
-    prevEl: '.swiper-button-prev--20salt',
-  },
-  pagination: {
-    el: '.swiper-pagination--20salt',
-    clickable: true,
-  },
-});
-productSwipers.push(cardsSwiper20salt);
-
-// flsFunctions.tabs('.tabs__nav-btn--one-off', '.one-off .tabs__content-item', 'btn--active');
-flsFunctions.tabs('.tabs__nav-btn--liquids', '.liquids .tabs__content-item', 'btn--active');
-
-const sectionSlider = document.querySelectorAll('.section__slider');
-
-sectionSlider.forEach((slider, i) => {
-  const cards = slider.querySelectorAll('.card');
-  let ids = [];
-  cards.forEach((card) => {
-    const id = card.dataset.id;
-    if (id && !ids.includes(id)) {
-      ids.push(id);
-    }
-  });
-  if (ids.length > 1) {
-    const filter = createFilterNode(i, ids);
-    slider.parentNode.insertBefore(filter, slider);
-    flsFunctions.filter('.filter' + i, productSwipers[i]);
-  }
-});
-
-function createFilterNode(index, ids) {
-  const ul = document.createElement('ul');
-  ul.classList.add('filter', 'filter' + index);
-  for (let i = 0; i < ids.length + 1; i++) {
-    const li = document.createElement('li');
-    li.classList.add('filter__item');
-    const btn = document.createElement('button');
-    btn.classList.add('filter__btn', 'btn', 'btn--outline');
-    if (i == 0) {
-      btn.classList.add('filter__btn--active');
-      btn.dataset.id = 'all';
-      btn.innerText = 'все';
-    } else {
-      btn.dataset.id = ids[i - 1];
-      btn.innerText = ids[i - 1];
-    }
-    li.appendChild(btn);
-    ul.appendChild(li);
-  }
-  return ul;
-}
 
 // scroll to top
 const scrollBtn = document.querySelector('.scroll-to-top');

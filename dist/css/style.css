@@ -575,17 +575,18 @@ select {
   margin-top: 100px;
 }
 .section__title {
-  position: relative;
-  display: inline-block;
   margin-bottom: 40px;
-  padding-right: 105px;
   font-size: 32px;
   font-weight: 700;
   line-height: 1.5;
   text-transform: uppercase;
   color: #222;
 }
-.section__title::after {
+.section__title-text {
+  position: relative;
+  padding-right: 105px;
+}
+.section__title-text::after {
   position: absolute;
   right: 0;
   top: 50%;
@@ -1198,6 +1199,7 @@ select {
   width: 90px;
   height: 60px;
   margin-right: 13px;
+  object-fit: contain;
 }
 
 .menu__list {

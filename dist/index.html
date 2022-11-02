@@ -21,25 +21,25 @@
           <div class="swiper-wrapper">
             <div class="swiper-slide">
               <a class="logo" href="#">
-                <img class="logo__img" src="img/brands/miking-logo.png" alt="miking logo" />
+                <img class="logo__img" src="img/brands/miking-normal.png" alt="miking logo" />
                 <img class="logo__text" src="img/brands/miking-logo-text.svg" alt="miking" />
               </a>
             </div>
             <div class="swiper-slide">
               <a class="logo" href="#">
-                <img class="logo__img" src="img/brands/mkbar-logo.png" alt="mkbar logo" />
+                <img class="logo__img" src="img/brands/mkbar-normal.png" alt="mkbar logo" />
                 <img class="logo__text" src="img/brands/mkbar-logo-text.svg" alt="mkbar" />
               </a>
             </div>
             <div class="swiper-slide">
               <a class="logo" href="#">
-                <img class="logo__img" src="img/brands/sidia-logo.png" alt="sidia logo" />
+                <img class="logo__img" src="img/brands/sidia-normal.png" alt="sidia logo" />
                 <img class="logo__text" src="img/brands/sidia-logo-text.svg" alt="sidia" />
               </a>
             </div>
             <div class="swiper-slide">
               <a class="logo" href="#">
-                <img class="logo__img" src="img/brands/jumbo-logo.png" alt="jumbo juice logo" />
+                <img class="logo__img" src="img/brands/jumbo-normal.png" alt="jumbo juice logo" />
                 <img class="logo__text" src="img/brands/jumbo-logo-text.svg" alt="jumbo juice" />
               </a>
             </div>
@@ -83,9 +83,6 @@
             </li>
             <li class="menu__item">
               <a class="menu__link" href="#video">Видео</a>
-            </li>
-            <li class="menu__item">
-              <a class="menu__link" href="#about">О нас</a>
             </li>
             <li class="menu__item">
               <a class="menu__link" href="#footer">Контакты</a>
@@ -141,26 +138,26 @@
         <section class="section catalog one-off" id="one-off">
   <div class="container">
     <div class="section__inner">
-      <h2 class="section__title">Одноразовые электронные сигареты</h2>
+      <h2 class="section__title"><span class="section__title-text">Одноразовые электронные сигареты</span></h2>
       <div class="catalog__brands">
         <div class="catalog__brands-trigger">
-          <img class="catalog__brands-trigger-img" src="img/brands/new/miking-normal.png" alt="" />
+          <img class="catalog__brands-trigger-img" src="img/brands/miking-normal.png" alt="" />
           <span class="catalog__brands-trigger-text">miking</span>
         </div>
         <div class="catalog__brands-list">
           <button class="catalog__brands-btn btn btn--active" data-name="miking" data-puffs="800,1000,1500,3000,4000,5000,6000">
-            <img class="catalog__brands-img catalog__brands-img--normal" src="img/brands/new/miking-normal.png" alt="Miking" />
-            <img class="catalog__brands-img catalog__brands-img--white" src="img/brands/new/miking-white.png" alt="Miking" />
+            <img class="catalog__brands-img catalog__brands-img--normal" src="img/brands/miking-normal.png" alt="Miking" />
+            <img class="catalog__brands-img catalog__brands-img--white" src="img/brands/miking-white.png" alt="Miking" />
             Miking
           </button>
           <button class="catalog__brands-btn btn" data-name="mkbar" data-puffs="1500,3000">
-            <img class="catalog__brands-img catalog__brands-img--normal" src="img/brands/new/mkbar-normal.png" alt="Mk Bar" />
-            <img class="catalog__brands-img catalog__brands-img--white" src="img/brands/new/mkbar-white.png" alt="Mk Bar" />
+            <img class="catalog__brands-img catalog__brands-img--normal" src="img/brands/mkbar-normal.png" alt="Mk Bar" />
+            <img class="catalog__brands-img catalog__brands-img--white" src="img/brands/mkbar-white.png" alt="Mk Bar" />
             Mk Bar
           </button>
           <button class="catalog__brands-btn btn" data-name="sidia" data-puffs="4000">
-            <img class="catalog__brands-img catalog__brands-img--normal" src="img/brands/new/sidia-normal.png" alt="Sidia" />
-            <img class="catalog__brands-img catalog__brands-img--white" src="img/brands/new/sidia-white.png" alt="Sidia" />
+            <img class="catalog__brands-img catalog__brands-img--normal" src="img/brands/sidia-normal.png" alt="Sidia" />
+            <img class="catalog__brands-img catalog__brands-img--white" src="img/brands/sidia-white.png" alt="Sidia" />
             Sidia
           </button>
         </div>
@@ -210,7 +207,11 @@
         </ul>
         <button class="catalog__info-btn btn btn--filled btn--download">Получить прайс-лист<br />с оптовыми ценами</button>
       </div>
-
+      <script>
+        document.addEventListener('trigger-changed', (e) => {
+          console.log(e.detail);
+        });
+      </script>
       <div class="section__slider">
         <div class="swiper swiper-cards swiper-cards--one-off">
           <div class="swiper-wrapper">
@@ -970,7 +971,7 @@
         <section class="section reusable" id="reusable">
   <div class="container">
     <div class="section__inner">
-      <h2 class="section__title">Многоразовые электронные сигареты</h2>
+      <h2 class="section__title"><span class="section__title-text">Многоразовые электронные сигареты</span></h2>
 
       <div class="section__slider">
         <div class="swiper swiper-cards swiper-cards--reusable">
@@ -1029,7 +1030,7 @@
         <section class="section cartiges" id="cartiges">
   <div class="container">
     <div class="section__inner">
-      <h2 class="section__title">Картриджи для электронных сигарет</h2>
+      <h2 class="section__title"><span class="section__title-text">Картриджи для электронных сигарет</span></h2>
 
       <div class="section__slider">
         <div class="swiper swiper-cards swiper-cards--cartiges">
@@ -1088,195 +1089,121 @@
         <section class="section liquids" id="liquids">
   <div class="container">
     <div class="section__inner">
-      <h2 class="section__title">Жидкости для электронных сигарет</h2>
-      <div class="tabs">
-        <ul class="tabs__nav">
-          <li class="tabs__nav-item"><button class="tabs__nav-btn tabs__nav-btn--liquids btn btn--outline">12 salt</button></li>
-          <li class="tabs__nav-item"><button class="tabs__nav-btn tabs__nav-btn--liquids btn btn--outline">20 salt</button></li>
+      <h2 class="section__title"><span class="section__title-text">Жидкости для электронных сигарет</span></h2>
+      <div class="catalog__info">
+        <ul class="catalog__info-list">
+          <li class="catalog__info-item">
+            <span class="catalog__info-descr">Мощность аккумулятра</span>
+            <span class="catalog__info-value">550mAh</span>
+          </li>
+          <li class="catalog__info-item">
+            <span class="catalog__info-descr">Тип аккумулятра</span>
+            <span class="catalog__info-value">Не заряжаемый</span>
+          </li>
+          <li class="catalog__info-item">
+            <span class="catalog__info-descr">Объем жидкости</span>
+            <span class="catalog__info-value">3,2Мл</span>
+          </li>
+          <li class="catalog__info-item">
+            <span class="catalog__info-descr">Количество затяжек</span>
+            <span class="catalog__info-value">до 800</span>
+          </li>
+          <li class="catalog__info-item">
+            <span class="catalog__info-descr">Никотин</span>
+            <span class="catalog__info-value">20мг/мл</span>
+          </li>
+          <li class="catalog__info-item">
+            <span class="catalog__info-descr">Тип никотина</span>
+            <span class="catalog__info-value">Солевой</span>
+          </li>
         </ul>
-
-        <div class="tabs__content">
-          <div class="tabs__content-item">
-            <div class="section__slider">
-              <div class="swiper swiper-cards swiper-cards--12salt">
-                <div class="swiper-wrapper">
-                  <div class="swiper-slide">
-                    <div class="card" data-id="miking">
-                      <img class="card__img" src="img/jumbo-juice/APPLE-SHAFRAN.jpg" alt="" />
-                      <h3 class="card__title">"MIKING" 800 затяжек (Банан)</h3>
-                      <p class="card__descr">(550 mAh, 3,2 Мл, 2%, 20 мг/мл.)</p>
-                      <button class="card__btn btn">Заказать</button>
-                    </div>
-                  </div>
-                  <div class="swiper-slide">
-                    <div class="card" data-id="sidia">
-                      <img class="card__img" src="img/jumbo-juice/BERRIES HILTON.jpg" alt="" />
-                      <h3 class="card__title">"MIKING" 800 затяжек (Банан)</h3>
-                      <p class="card__descr">(550 mAh, 3,2 Мл, 2%, 20 мг/мл.)</p>
-                      <button class="card__btn btn">Заказать</button>
-                    </div>
-                  </div>
-                  <div class="swiper-slide">
-                    <div class="card" data-id="miking">
-                      <img class="card__img" src="img/jumbo-juice/CANDY ROSE.jpg" alt="" />
-                      <h3 class="card__title">"MIKING" 800 затяжек (Банан)</h3>
-                      <p class="card__descr">(550 mAh, 3,2 Мл, 2%, 20 мг/мл.)</p>
-                      <button class="card__btn btn">Заказать</button>
-                    </div>
-                  </div>
-                  <div class="swiper-slide">
-                    <div class="card" data-id="miking">
-                      <img class="card__img" src="img/jumbo-juice/FRUIT ICE-DRINK.jpg" alt="" />
-                      <h3 class="card__title">"MIKING" 800 затяжек (Банан)</h3>
-                      <p class="card__descr">(550 mAh, 3,2 Мл, 2%, 20 мг/мл.)</p>
-                      <button class="card__btn btn">Заказать</button>
-                    </div>
-                  </div>
-                  <div class="swiper-slide">
-                    <div class="card" data-id="miking">
-                      <img class="card__img" src="img/jumbo-juice/ICE JAM.jpg" alt="" />
-                      <h3 class="card__title">"MIKING" 800 затяжек (Банан)</h3>
-                      <p class="card__descr">(550 mAh, 3,2 Мл, 2%, 20 мг/мл.)</p>
-                      <button class="card__btn btn">Заказать</button>
-                    </div>
-                  </div>
-                  <div class="swiper-slide">
-                    <div class="card" data-id="sidia">
-                      <img class="card__img" src="img/jumbo-juice/ICE-POKEMAN.jpg" alt="" />
-                      <h3 class="card__title">"MIKING" 800 затяжек (Банан)</h3>
-                      <p class="card__descr">(550 mAh, 3,2 Мл, 2%, 20 мг/мл.)</p>
-                      <button class="card__btn btn">Заказать</button>
-                    </div>
-                  </div>
-                  <div class="swiper-slide">
-                    <div class="card" data-id="miking">
-                      <img class="card__img" src="img/jumbo-juice/JAMBO 2.jpg" alt="" />
-                      <h3 class="card__title">"MIKING" 800 затяжек (Банан)</h3>
-                      <p class="card__descr">(550 mAh, 3,2 Мл, 2%, 20 мг/мл.)</p>
-                      <button class="card__btn btn">Заказать</button>
-                    </div>
-                  </div>
-                  <div class="swiper-slide">
-                    <div class="card" data-id="miking">
-                      <img class="card__img" src="img/jumbo-juice/MASON ICE-MIX.jpg" alt="" />
-                      <h3 class="card__title">"MIKING" 800 затяжек (Банан)</h3>
-                      <p class="card__descr">(550 mAh, 3,2 Мл, 2%, 20 мг/мл.)</p>
-                      <button class="card__btn btn">Заказать</button>
-                    </div>
-                  </div>
-                </div>
+        <button class="catalog__info-btn btn btn--filled btn--download">Получить прайс-лист<br />с оптовыми ценами</button>
+      </div>
+      <div class="section__slider">
+        <div class="swiper swiper-cards swiper-cards--liquids">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="card" data-id="miking">
+                <img class="card__img" src="img/jumbo-juice/APPLE-SHAFRAN.jpg" alt="" />
+                <h3 class="card__title">"MIKING" 800 затяжек (Банан)</h3>
+                <p class="card__descr">(550 mAh, 3,2 Мл, 2%, 20 мг/мл.)</p>
+                <button class="card__btn btn">Заказать</button>
               </div>
-              <div class="swiper-button-prev swiper-button-prev--12salt"></div>
-              <div class="swiper-button-next swiper-button-next--12salt"></div>
-              <div class="swiper-pagination swiper-pagination--12salt"></div>
             </div>
-          </div>
-          <div class="tabs__content-item">
-            <div class="section__slider">
-              <div class="swiper swiper-cards swiper-cards--20salt">
-                <div class="swiper-wrapper">
-                  <div class="swiper-slide">
-                    <div class="card" data-id="miking">
-                      <img class="card__img" src="img/jumbo-juice/STRAW ME ICE.jpg" alt="" />
-                      <h3 class="card__title">"MIKING" 800 затяжек (Банан)</h3>
-                      <p class="card__descr">(550 mAh, 3,2 Мл, 2%, 20 мг/мл.)</p>
-                      <button class="card__btn btn">Заказать</button>
-                    </div>
-                  </div>
-                  <div class="swiper-slide">
-                    <div class="card" data-id="sidia">
-                      <img class="card__img" src="img/jumbo-juice/BERRIES HILTON.jpg" alt="" />
-                      <h3 class="card__title">"MIKING" 800 затяжек (Банан)</h3>
-                      <p class="card__descr">(550 mAh, 3,2 Мл, 2%, 20 мг/мл.)</p>
-                      <button class="card__btn btn">Заказать</button>
-                    </div>
-                  </div>
-                  <div class="swiper-slide">
-                    <div class="card" data-id="miking">
-                      <img class="card__img" src="img/jumbo-juice/CANDY ROSE.jpg" alt="" />
-                      <h3 class="card__title">"MIKING" 800 затяжек (Банан)</h3>
-                      <p class="card__descr">(550 mAh, 3,2 Мл, 2%, 20 мг/мл.)</p>
-                      <button class="card__btn btn">Заказать</button>
-                    </div>
-                  </div>
-                  <div class="swiper-slide">
-                    <div class="card" data-id="miking">
-                      <img class="card__img" src="img/jumbo-juice/FRUIT ICE-DRINK.jpg" alt="" />
-                      <h3 class="card__title">"MIKING" 800 затяжек (Банан)</h3>
-                      <p class="card__descr">(550 mAh, 3,2 Мл, 2%, 20 мг/мл.)</p>
-                      <button class="card__btn btn">Заказать</button>
-                    </div>
-                  </div>
-                  <div class="swiper-slide">
-                    <div class="card" data-id="miking">
-                      <img class="card__img" src="img/jumbo-juice/ICE JAM.jpg" alt="" />
-                      <h3 class="card__title">"MIKING" 800 затяжек (Банан)</h3>
-                      <p class="card__descr">(550 mAh, 3,2 Мл, 2%, 20 мг/мл.)</p>
-                      <button class="card__btn btn">Заказать</button>
-                    </div>
-                  </div>
-                  <div class="swiper-slide">
-                    <div class="card" data-id="sidia">
-                      <img class="card__img" src="img/jumbo-juice/ICE-POKEMAN.jpg" alt="" />
-                      <h3 class="card__title">"MIKING" 800 затяжек (Банан)</h3>
-                      <p class="card__descr">(550 mAh, 3,2 Мл, 2%, 20 мг/мл.)</p>
-                      <button class="card__btn btn">Заказать</button>
-                    </div>
-                  </div>
-                  <div class="swiper-slide">
-                    <div class="card" data-id="miking">
-                      <img class="card__img" src="img/jumbo-juice/JAMBO 2.jpg" alt="" />
-                      <h3 class="card__title">"MIKING" 800 затяжек (Банан)</h3>
-                      <p class="card__descr">(550 mAh, 3,2 Мл, 2%, 20 мг/мл.)</p>
-                      <button class="card__btn btn">Заказать</button>
-                    </div>
-                  </div>
-                  <div class="swiper-slide">
-                    <div class="card" data-id="miking">
-                      <img class="card__img" src="img/jumbo-juice/MASON ICE-MIX.jpg" alt="" />
-                      <h3 class="card__title">"MIKING" 800 затяжек (Банан)</h3>
-                      <p class="card__descr">(550 mAh, 3,2 Мл, 2%, 20 мг/мл.)</p>
-                      <button class="card__btn btn">Заказать</button>
-                    </div>
-                  </div>
-                </div>
+            <div class="swiper-slide">
+              <div class="card" data-id="sidia">
+                <img class="card__img" src="img/jumbo-juice/BERRIES HILTON.jpg" alt="" />
+                <h3 class="card__title">"MIKING" 800 затяжек (Банан)</h3>
+                <p class="card__descr">(550 mAh, 3,2 Мл, 2%, 20 мг/мл.)</p>
+                <button class="card__btn btn">Заказать</button>
               </div>
-              <div class="swiper-button-prev swiper-button-prev--20salt"></div>
-              <div class="swiper-button-next swiper-button-next--20salt"></div>
-              <div class="swiper-pagination swiper-pagination--20salt"></div>
+            </div>
+            <div class="swiper-slide">
+              <div class="card" data-id="miking">
+                <img class="card__img" src="img/jumbo-juice/CANDY ROSE.jpg" alt="" />
+                <h3 class="card__title">"MIKING" 800 затяжек (Банан)</h3>
+                <p class="card__descr">(550 mAh, 3,2 Мл, 2%, 20 мг/мл.)</p>
+                <button class="card__btn btn">Заказать</button>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="card" data-id="miking">
+                <img class="card__img" src="img/jumbo-juice/FRUIT ICE-DRINK.jpg" alt="" />
+                <h3 class="card__title">"MIKING" 800 затяжек (Банан)</h3>
+                <p class="card__descr">(550 mAh, 3,2 Мл, 2%, 20 мг/мл.)</p>
+                <button class="card__btn btn">Заказать</button>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="card" data-id="miking">
+                <img class="card__img" src="img/jumbo-juice/ICE JAM.jpg" alt="" />
+                <h3 class="card__title">"MIKING" 800 затяжек (Банан)</h3>
+                <p class="card__descr">(550 mAh, 3,2 Мл, 2%, 20 мг/мл.)</p>
+                <button class="card__btn btn">Заказать</button>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="card" data-id="sidia">
+                <img class="card__img" src="img/jumbo-juice/ICE-POKEMAN.jpg" alt="" />
+                <h3 class="card__title">"MIKING" 800 затяжек (Банан)</h3>
+                <p class="card__descr">(550 mAh, 3,2 Мл, 2%, 20 мг/мл.)</p>
+                <button class="card__btn btn">Заказать</button>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="card" data-id="miking">
+                <img class="card__img" src="img/jumbo-juice/JAMBO 2.jpg" alt="" />
+                <h3 class="card__title">"MIKING" 800 затяжек (Банан)</h3>
+                <p class="card__descr">(550 mAh, 3,2 Мл, 2%, 20 мг/мл.)</p>
+                <button class="card__btn btn">Заказать</button>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="card" data-id="miking">
+                <img class="card__img" src="img/jumbo-juice/MASON ICE-MIX.jpg" alt="" />
+                <h3 class="card__title">"MIKING" 800 затяжек (Банан)</h3>
+                <p class="card__descr">(550 mAh, 3,2 Мл, 2%, 20 мг/мл.)</p>
+                <button class="card__btn btn">Заказать</button>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="card" data-id="miking">
+                <img class="card__img" src="img/jumbo-juice/MASON ICE-MIX.jpg" alt="" />
+                <h3 class="card__title">"MIKING" 800 затяжек (Банан)</h3>
+                <p class="card__descr">(550 mAh, 3,2 Мл, 2%, 20 мг/мл.)</p>
+                <button class="card__btn btn">Заказать</button>
+              </div>
             </div>
           </div>
         </div>
+        <div class="swiper-button-prev swiper-button-prev--liquids"></div>
+        <div class="swiper-button-next swiper-button-next--liquids"></div>
+        <div class="swiper-pagination swiper-pagination--liquids"></div>
       </div>
     </div>
   </div>
 </section>
 
-
-        <!-- about -->
-        <section class="section about" id="about">
-  <div class="container">
-    <div class="section__inner">
-      <h2 class="section__title">О нас</h2>
-      <div class="about__content">
-        <p class="about__text">
-          Задача организации, в особенности же начало повседневной работы по формированию позиции влечет за собой процесс внедрения и
-          модернизации модели развития. Таким образом рамки и место обучения кадров требуют от нас анализа модели развития. Разнообразный и
-          богатый опыт сложившаяся структура организации влечет за собой процесс внедрения и модернизации систем массового участия.
-        </p>
-        <p class="about__text">
-          Задача организации, в особенности же новая модель организационной деятельности позволяет выполнять важные задания по разработке
-          форм развития. Значимость этих проблем настолько очевидна, что постоянное информационно-пропагандистское обеспечение нашей
-          деятельности представляет собой интересный эксперимент проверки модели развития. Повседневная практика показывает, что сложившаяся
-          структура организации представляет собой интересный эксперимент проверки новых предложений. Товарищи! укрепление и развитие
-          структуры позволяет оценить значение соответствующий условий активизации. Значимость этих проблем настолько очевидна, что рамки и
-          место обучения кадров влечет за собой процесс внедрения и модернизации модели развития. Задача организации, в особенности же
-          начало повседневной работы по формированию позиции позволяет оценить значение систем массового участия.
-        </p>
-      </div>
-    </div>
-  </div>
-</section>
 
         <!-- brands -->
         <section class="section brands">
