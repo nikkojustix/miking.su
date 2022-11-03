@@ -89,6 +89,10 @@
     list-style-type: none;
     padding: 15px 10px;
     display: flex;
+
+    &--contacts {
+      padding: 0;
+    }
   }
 
   &__link {

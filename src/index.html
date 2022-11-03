@@ -45,15 +45,14 @@
         <div class="modal__inner">
           <div class="modal__header">
             <div class="modal__close">&#10006;</div>
-            <div class="modal__title">Напишите нам для уточнения цены и заказа</div>
+            <div class="modal__title">Получить прайс-лист с оптовыми ценами</div>
           </div>
           <div class="modal__body">
             <form class="order">
-              <input class="order__input" type="text" name="name" placeholder="Имя" required />
-              <input class="order__input" type="email" name="email" placeholder="E-mail" required />
-              <input class="order__input order__input--phone" name="phone" type="tel" placeholder="Телефон" required />
-              <textarea class="order__input" name="mes" placeholder="Описание товара" required></textarea>
-              <input type="submit" name="submit" class="modal__btn order__btn" value="Отправить" />
+              <input class="order__input" type="text" name="name" placeholder="Имя*" required />
+              <input class="order__input order__input--phone" name="phone" type="tel" placeholder="Телефон*" required />
+              <input class="order__input" type="email" name="email" placeholder="E-mail" />
+              <button type="submit" class="btn btn--filled">Отправить</button>
             </form>
           </div>
         </div>

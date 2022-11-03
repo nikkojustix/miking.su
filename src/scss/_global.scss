@@ -36,6 +36,7 @@
     color: $color-primary-dark;
     &-text {
       position: relative;
+      display: inline-block;
       padding-right: 105px;
       &::after {
         position: absolute;
@@ -230,54 +231,29 @@
 
 .swiper-button-prev {
   left: 0;
-  transform: translate(-50%, -100%);
-  background-image: url('@img/arrow-prev.svg');
-
-  &:hover,
-  &:focus {
-    background-image: url('@img/arrow-prev-darker.svg');
-  }
+  transform: translate(-50%, -150%);
+  background-image: url('@img/arrow-prev-stroke.svg');
 
   &--header {
     transform: translate(-50%, -100%);
-    background-image: url('@img/arrow-prev-stroke.svg');
-    &:hover,
-    &:focus {
-      background-image: url('@img/arrow-prev-stroke.svg');
-    }
   }
 }
 
 .swiper-button-next {
   right: 0;
-  transform: translate(50%, -100%);
-  background-image: url('@img/arrow-next.svg');
-
-  &:hover,
-  &:focus {
-    background-image: url('@img/arrow-next-darker.svg');
-  }
+  transform: translate(50%, -150%);
+  background-image: url('@img/arrow-next-stroke.svg');
 
   &--header {
     transform: translate(50%, -100%);
-    background-image: url('@img/arrow-next-stroke.svg');
-    &:hover,
-    &:focus {
-      background-image: url('@img/arrow-next-stroke.svg');
-    }
   }
 }
 
 .swiper-pagination-bullets.swiper-pagination-horizontal {
-  position: initial;
-  display: flex;
-  justify-content: center;
-  margin-top: 20px;
+  bottom: -20px;
 }
 
 .swiper-pagination-bullet {
-  width: 10px;
-  height: 10px;
   background-color: $color-primary-light;
   cursor: pointer;
   &-active {
@@ -316,7 +292,6 @@
   }
 }
 
-//modal
 .modal {
   position: fixed;
   top: 0;
@@ -336,9 +311,6 @@
     border-radius: 20px;
     background-color: $color-white;
     position: relative;
-  }
-
-  &__header {
   }
 
   &__title {
@@ -399,6 +371,9 @@
       background-color: transparent;
       width: 100%;
       max-width: 100%;
+      &.error {
+        background-color: #e02525;
+      }
     }
   }
 
@@ -459,10 +434,12 @@
     margin-top: 80px;
     &__title {
       font-size: 20px;
-      padding-right: 80px;
-      &::after {
-        width: 60px;
-        height: 26px;
+      &-text {
+        padding-right: 80px;
+        &::after {
+          width: 60px;
+          height: 26px;
+        }
       }
     }
   }

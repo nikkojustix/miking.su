@@ -95,10 +95,7 @@ const sliderConfig = {
   spaceBetween: 30,
   slidesPerView: 1,
   slidesPerGroup: 1,
-  grid: {
-    rows: 2,
-    fill: 'row',
-  },
+
   breakpoints: {
     480: {
       slidesPerView: 2,
@@ -136,6 +133,8 @@ const cardsSwiperOneoff = new Swiper('.swiper-cards--one-off', {
   pagination: {
     el: '.swiper-pagination--one-off',
     clickable: true,
+    dynamicBullets: true,
+    dynamicMainBullets: 5,
   },
 });
 
@@ -267,7 +266,7 @@ scrollBtn.addEventListener('click', () => {
   });
 });
 
-flsFunctions.bindModal('.card__btn', '.modal--order', '.modal__close');
+flsFunctions.bindModal('.btn--download', '.modal--order', '.modal__close');
 
 // phone mask
 const elements = document.querySelectorAll('.order__input--phone');
